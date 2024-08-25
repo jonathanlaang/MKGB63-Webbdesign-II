@@ -1,0 +1,101 @@
+/* Offcanvas Menu Enhancements */
+.offcanvas-header {
+    border-bottom: 1px solid #ddd;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns the menu items at the top */
+    padding-top: 20px; /* Adds some space at the top */
+}
+
+/* Adjust spacing for navigation items */
+.navbar-nav {
+    margin-bottom: 20px; /* Adds space between the navigation items and social media section */
+    padding-left: 0; /* Removes any left padding to align the items to the left */
+}
+
+.nav-item {
+    margin-bottom: 10px; /* Adds space between each nav item */
+}
+
+/* Indicator Styles in Offcanvas */
+.offcanvas .indicator {
+    display: none; /* Hide indicators inside Offcanvas */
+}
+
+/* Social Media Links Styling */
+.social-links a {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 10px 0;
+    color: rgba(30, 30, 30, 0.78);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: teal;
+}
+
+.social-links i {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: #3C9DA3; /* Bootstrap primary color for the icons */
+}
+
+/* Style the close button to have a circular background */
+.offcanvas-header .btn-close {
+    width: 50px; /* Same size as your navbar buttons */
+    height: 50px; /* Same size as your navbar buttons */
+    border-radius: 50%; /* Make it a circle */
+    background-color: #e0e0e0; /* Background color similar to your navbar buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Ensure no extra padding */
+    border: none; /* Remove the default border */
+    outline: none; /* Remove focus outline */
+}
+
+.offcanvas-header .btn-close::before {
+    content: '✕'; /* Replace the default X icon */
+    font-size: 1.5em; /* Adjust the size of the X */
+    color: rgba(30, 30, 30, 0.78); /* Same color as your navbar icons */
+}
+
+.offcanvas-header .btn-close:hover {
+    background-color: #d0d0d0; /* Slightly darker background on hover */
+}
+
+/* Frosted Glass Effect for the Offcanvas */
+.offcanvas {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for the frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Optional: adds a border to enhance the effect */
+}
+
+/* Dark Mode Support */
+/* @media (prefers-color-scheme: dark) {
+    .offcanvas, .offcanvas-header, .offcanvas-body {
+        background-color: rgba(30, 30, 30, 0.9);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: #fff;
+    }
+    .offcanvas .nav-link {
+        color: #ddd;
+    }
+    .offcanvas .nav-link:hover {
+        background-color: #444;
+    }
+    .social-links a {
+        color: #ddd;
+    }
+    .social-links a:hover {
+        color: #fff;
+    }
+} */

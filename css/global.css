@@ -1,0 +1,51 @@
+/* Global Styles */
+body, html {
+    background-color: #f4f4f4; /* Matches the section background */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* Paragraph Styles */
+p {
+    font-weight: 300;
+}
+
+/* Vector Image Styling */
+.vector-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .text-image-group {
+        flex-direction: row; /* Keep row layout on mobile */
+        text-align: left; /* Keep text left-aligned */
+    }
+
+    .text-image-group img {
+        max-width: 40%; /* Maintain image size */
+        margin-bottom: 0;
+    }
+
+    .text-image-group p {
+        text-align: left;
+        padding: 20px;
+    }
+
+    .text-image-group .indicator {
+        display: block; /* Keep indicators visible on mobile */
+    }
+}

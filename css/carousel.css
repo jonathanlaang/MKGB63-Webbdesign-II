@@ -1,0 +1,23 @@
+/* Ensure the carousel takes up the right amount of space */
+.carousel {
+    width: 100%;
+    margin: 0 auto; /* Center the carousel */
+}
+
+/* Set a fixed height for the carousel */
+.carousel-inner {
+    height: 50vh; /* Adjust this value based on your preferred height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4; /* Optional: Set a background color to fill any empty space */
+}
+
+/* Ensure images fit properly within the carousel without stretching */
+.carousel-item img {
+    object-fit: contain; /* Ensures the image is contained within the carousel's boundaries */
+    width: 100%; /* Ensure the images take up the full width of the carousel */
+    height: auto;
+    margin: auto; /* Center the images */
+    display: block; /* Ensure images are block-level elements */
+}

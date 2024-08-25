@@ -1,0 +1,79 @@
+/* General Section Styling */
+.content-section {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    position: relative;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About Me Section Title Alignment */
+#about-me .section-header h2 {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: left; /* Left align */
+    margin-bottom: 40px;
+    margin-left: calc(16.6667%); /* Align with the second column (2/6) */
+    color: rgba(30, 30, 30, 0.78);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+
+/* Section Content Layout */
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Text and Image Group Layout */
+.text-image-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for content alignment */
+    margin-bottom: 40px;
+}
+
+.text-image-group img {
+    max-width: 40%; /* Adjusted width for image */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-image-group p {
+    flex: 1;
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: left;
+    padding: 20px;
+}
+
+/* Section Background Decoration */
+section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,386 @@
+/* Global Styles */
+body, html {
+    background-color: #f4f4f4; /* Matches the section background */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background: none; /* No background color */
+    color: rgba(30, 30, 30, 0.78); /* Font color with 78% opacity */
+}
+
+.header-container {
+    display: inline-block;
+}
+
+header h1 {
+    font-size: 1.5em; /* Smaller size to align with the four letters "LÅNG" */
+    margin: 0;
+    font-weight: 600; /* Semi-Bold */
+    letter-spacing: 0.5px; /* Adjusted letter spacing */
+}
+
+header h2 {
+    font-size: 2.5em; /* Size that matches the prominence needed for LÅNG */
+    margin: 10px 0 0 0; /* Top margin to space out from h1 */
+    font-weight: 700; /* Bold, giving it more weight compared to h1 */
+    letter-spacing: 0.5px; /* Adjusted letter spacing to match Jonathan */
+    color: inherit;
+}
+
+/* General Section Styling */
+.content-section {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    position: relative;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About Me Section Title Alignment */
+#about-me .section-header h2 {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: left; /* Left align */
+    margin-bottom: 40px;
+    margin-left: calc(16.6667%); /* Align with the second column (2/6) */
+    color: rgba(30, 30, 30, 0.78);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+
+/* Section Content Layout */
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Text and Image Group Layout */
+.text-image-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for content alignment */
+    margin-bottom: 40px;
+}
+
+.text-image-group img {
+    max-width: 40%; /* Adjusted width for image */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-image-group p {
+    flex: 1;
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: left;
+    padding: 20px;
+}
+
+.section-content .indicator {
+    font-size: 2em;
+    color: teal;
+    margin: 0 20px;
+}
+
+/* Vector Image Styling */
+.vector-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .text-image-group {
+        flex-direction: row; /* Keep row layout on mobile */
+        text-align: left; /* Keep text left-aligned */
+    }
+
+    .text-image-group img {
+        max-width: 40%; /* Maintain image size */
+        margin-bottom: 0;
+    }
+
+    .text-image-group p {
+        text-align: left;
+        padding: 20px;
+    }
+
+    .text-image-group .indicator {
+        display: block; /* Keep indicators visible on mobile */
+    }
+}
+
+/* Section Background Decoration */
+section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* Paragraph Styles */
+p {
+    font-weight: 300;
+}
+
+/* Bottom Navigation Bar Styles */
+#bottomNav {
+    background-color: #f8f9fa;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-icon-container {
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icon-container i {
+    font-size: 1.5em;
+    color: rgba(30, 30, 30, 0.78); /* Updated hex color with 78% opacity */
+}
+
+#sectionTitle {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgba(30, 30, 30, 0.78); /* Updated hex color with 78% opacity */
+    text-decoration: underline;
+    text-decoration-thickness: 2px; /* Thicker underline */
+    text-underline-offset: 4px; /* Adds space between text and underline */
+}
+
+.navbar-toggler {
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none; /* Remove focus outline */
+}
+
+.navbar-toggler i {
+    font-size: 1.5em;
+    color: rgba(30, 30, 30, 0.78); /* Updated hex color with 78% opacity */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Ensure no outline on focus */
+    box-shadow: none; /* Remove any hover border or shadow */
+}
+
+/* Section Indicators */
+.indicator {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 10px 0;
+    border: 2px solid teal;
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+.filled {
+    background-color: teal;
+}
+
+#sectionIndicators {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Wave Line Styling */
+.wave-container {
+    width: 100%;
+    overflow: hidden; /* Ensures no extra space */
+    z-index: 1;
+}
+
+.wave-line {
+    width: 100%; /* Make sure it scales across the width of the container */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+/* Optional: For inline SVG, you can style the <path> directly */
+.wave-container svg {
+    width: 100%;
+    height: auto;
+}
+
+/* Video Styling */
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.embed-responsive-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Offcanvas Menu Enhancements */
+.offcanvas-header {
+    border-bottom: 1px solid #ddd;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns the menu items at the top */
+    padding-top: 20px; /* Adds some space at the top */
+}
+
+/* Adjust spacing for navigation items */
+.navbar-nav {
+    margin-bottom: 20px; /* Adds space between the navigation items and social media section */
+    padding-left: 0; /* Removes any left padding to align the items to the left */
+}
+
+.nav-item {
+    margin-bottom: 10px; /* Adds space between each nav item */
+}
+
+/* Indicator Styles in Offcanvas */
+.offcanvas .indicator {
+    display: none; /* Hide indicators inside Offcanvas */
+}
+
+/* Social Media Links Styling */
+.social-links a {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 10px 0;
+    color: rgba(30, 30, 30, 0.78); /* Greyish text color */
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: teal;
+}
+
+.social-links i {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: #3C9DA3; /* Bootstrap primary color for the icons */
+}
+
+/* Style the close button to have a circular background */
+.offcanvas-header .btn-close {
+    width: 50px; /* Same size as your navbar buttons */
+    height: 50px; /* Same size as your navbar buttons */
+    border-radius: 50%; /* Make it a circle */
+    background-color: #e0e0e0; /* Background color similar to your navbar buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Ensure no extra padding */
+    border: none; /* Remove the default border */
+    outline: none; /* Remove focus outline */
+}
+
+.offcanvas-header .btn-close::before {
+    content: '✕'; /* Replace the default X icon */
+    font-size: 1.5em; /* Adjust the size of the X */
+    color: rgba(30, 30, 30, 0.78); /* Same color as your navbar icons */
+}
+
+.offcanvas-header .btn-close:hover {
+    background-color: #d0d0d0; /* Slightly darker background on hover */
+}
+
+/* Frosted Glass Effect for the Offcanvas */
+.offcanvas {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for the frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Optional: adds a border to enhance the effect */
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .offcanvas, .offcanvas-header, .offcanvas-body {
+        background-color: rgba(30, 30, 30, 0.9);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: #fff;
+    }
+    .offcanvas .nav-link {
+        color: #ddd;
+    }
+    .offcanvas .nav-link:hover {
+        background-color: #444;
+    }
+    .social-links a {
+        color: #ddd;
+    }
+    .social-links a:hover {
+        color: #fff;
+    }
+}
