@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const offcanvasMenu = document.getElementById('offcanvasNavbar');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    const preloader = document.querySelector('#preloader');
+    if (preloader) {
+        window.addEventListener('load', () => {
+            preloader.remove();
+        });
+    }
+
     function updateSectionInfo() {
         let currentSection = '';
         sections.forEach((section, index) => {
