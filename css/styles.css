@@ -6,12 +6,9 @@
     justify-content: center;
 }
 
-
-
-
 .section-content .indicator {
     font-size: 2em;
-    color: teal;
+    color: #3C9DA3;
     margin: 0 20px;
 }
 
@@ -107,13 +104,13 @@
     width: 10px;
     height: 10px;
     margin: 10px 0;
-    border: 2px solid teal;
+    border: 2px solid #3C9DA3;
     border-radius: 50%;
     z-index: 9999;
 }
 
 .filled {
-    background-color: teal;
+    background-color: #3C9DA3;
 }
 
 #sectionIndicators {
@@ -197,7 +194,7 @@
 }
 
 .social-links a:hover {
-    color: teal;
+    color: #3C9DA3;
 }
 
 .social-links i {

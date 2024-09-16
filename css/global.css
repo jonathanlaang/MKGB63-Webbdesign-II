@@ -19,7 +19,6 @@ h6 {
 
 p {
     font-weight: 300;
-    /* margin: 0 0 1.5em; */
     max-height: 20rem;
     overflow-y: auto;
 }
@@ -48,8 +47,7 @@ video {
     width: 100%;
     padding: 0;
     overflow: hidden;
-    padding-top: 56.25%;
-    /* 16:9 Aspect Ratio */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
 
 .embed-responsive-item {
@@ -60,8 +58,6 @@ video {
     height: 100%;
     border: 0;
 }
-
-
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

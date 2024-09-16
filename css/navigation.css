@@ -51,6 +51,7 @@
 
 
 
+
 .nav-icon-container i {
     font-size: 1.5em;
     color: rgba(30, 30, 30, 0.78); /* Updated hex color with 78% opacity */
@@ -101,3 +102,7 @@
     width: 100%;
     height: auto;
 }
+
+
+
+
