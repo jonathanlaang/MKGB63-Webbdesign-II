@@ -1,8 +1,8 @@
 .project-segment {
     position: relative;
-    padding: 0 0 20px 25px; /* Anpassa padding för att matcha vänstermarginalen */
-    margin-top: -2px; /* Tar bort gapet mellan linjerna så att de hänger ihop */
-    border-left: 2px solid teal; /* Teal färg för linjen */
+    padding: 0 0 20px 25px;
+    margin-top: -2px;
+    border-left: 2px solid teal;
 }
 
 .project-segment:before {
@@ -11,14 +11,14 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    left: -9px; /* Justerar cirkelns position till linjen */
-    top: 0; /* Positionerar cirkeln högst upp på varje segment */
-    background: #f4f4f4; /* Bakgrundsfärgen matchar sektionens bakgrund */
-    border: 2px solid teal; /* Teal färg för cirkelns kant */
+    left: -9px;
+    top: 0;
+    background: #f4f4f4;
+    border: 2px solid teal;
 }
 
 .project-segment:last-child {
-    padding-bottom: 0; /* Tar bort padding på sista projektsegmentet */
+    padding-bottom: 0;
 }
 
 .text-image-group {
@@ -46,16 +46,15 @@
     padding: 20px;
 }
 
-/* Styling for the project content */
 .project-segment .text-image-group {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 20px; /* Lägger till mellanrum mellan bild och text */
+    gap: 20px;
 }
 
 .project-segment img {
-    max-width: 40%; /* Storlek på projektbilden */
+    max-width: 40%;
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -68,14 +67,51 @@
     margin: 0;
 }
 
-/* Responsive Adjustments */
+.gradient-lostsyncs {
+    font-style: italic;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right, #74b7ed, #d3a5fc, #feb3b8);
+    background-size: 200% 200%;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    display: inline-block;
+    animation: gradient-lostsyncs 5s ease infinite;
+}
+
+@keyframes gradient-lostsyncs {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gradient-crosscode {
+    font-style: italic;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right, #8B6F45, #C9BC73, #8B6F45);
+    background-size: 200% 200%;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    display: inline-block;
+    animation: gradient-crosscode 5s ease infinite;
+}
+
+@keyframes gradient-crosscode {
+    0% { background-position: 100% 50%; }
+    50% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
 @media (max-width: 768px) {
     .project-segment .text-image-group {
-        flex-direction: column; /* Byt layout till kolumn på mindre skärmar */
+        flex-direction: column;
         align-items: flex-start;
     }
 
     .project-segment img {
-        max-width: 100%; /* Full bredd på mindre skärmar */
+        max-width: 100%;
     }
 }
