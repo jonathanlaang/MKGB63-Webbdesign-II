@@ -13,7 +13,7 @@
     text-align: left;
     margin-bottom: 40px;
     margin-left: calc(16.6667%); /* Align with the second column (2/6) */
-    color: rgba(30, 30, 30, 0.78);
+    color: #333333;
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 2px;

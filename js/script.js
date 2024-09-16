@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const offcanvasMenu = document.getElementById('offcanvasNavbar');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Preloader functionality
     const preloader = document.querySelector('#preloader');
     if (preloader) {
         window.addEventListener('load', () => {
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Update section information and animate the section title
     function updateSectionInfo() {
         let currentSection = '';
         sections.forEach((section, index) => {
@@ -25,24 +27,43 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        let newTitle = '';
         switch (currentSection) {
             case 'about-me':
-                sectionTitle.textContent = 'ABOUT ME';
+                newTitle = 'ABOUT ME';
                 break;
             case 'projects':
-                sectionTitle.textContent = 'PROJECTS';
+                newTitle = 'PROJECTS';
                 break;
-            case 'spare-time':
-                sectionTitle.textContent = 'SPARE TIME';
+            case 'leisure-and-hobbies':
+                newTitle = 'Leisure & Hobbies';
                 break;
-            case 'student-union':
-                sectionTitle.textContent = 'STUDENT UNION';
+            case 'student-memories':
+                newTitle = 'Student Memories';
                 break;
             default:
-                sectionTitle.textContent = '';
+                newTitle = '';
+        }
+
+        // Check if the title has changed and animate the change
+        if (sectionTitle.textContent !== newTitle) {
+            // Create a temporary element with the new title and animate the flip
+            const tempTitle = document.createElement('span');
+            tempTitle.textContent = newTitle;
+            tempTitle.classList.add('flip');
+
+            // Clear previous content and add the new animated content
+            sectionTitle.innerHTML = '';
+            sectionTitle.appendChild(tempTitle);
+
+            // Update the title after the animation ends
+            tempTitle.addEventListener('animationend', () => {
+                sectionTitle.textContent = newTitle;
+            });
         }
     }
 
+    // Update the indicators to reflect the current section
     function updateIndicators(activeIndex) {
         indicators.forEach((indicator, index) => {
             if (index === activeIndex) {
@@ -53,16 +74,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Update the navigation links to highlight the current section
     function updateNavLinks(currentSection) {
         navLinks.forEach(link => {
             if (link.getAttribute('href').includes(currentSection)) {
-                link.classList.add('active-link'); // Lägg till en klass för aktiv länk
+                link.classList.add('active-link');
             } else {
                 link.classList.remove('active-link');
             }
         });
     }
 
+    // Handle showing and hiding of indicators when the offcanvas menu is toggled
     offcanvasMenu.addEventListener('show.bs.offcanvas', () => {
         indicators.forEach(indicator => {
             indicator.style.display = 'none';
@@ -75,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Intersection observer to handle fade-in effects for elements
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
         threshold: 0.5,
@@ -96,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         appearOnScroll.observe(fader);
     });
 
+    // Listen for scroll events to update section information
     window.addEventListener('scroll', updateSectionInfo);
     updateSectionInfo();
 });
