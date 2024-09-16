@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sectionTitle = document.getElementById('sectionTitle');
     const indicators = document.querySelectorAll('.indicator');
     const offcanvasMenu = document.getElementById('offcanvasNavbar');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    // Update section title and indicators based on scroll position
     function updateSectionInfo() {
         let currentSection = '';
         sections.forEach((section, index) => {
@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (pageYOffset >= sectionTop - 50) {
                 currentSection = section.getAttribute('id');
                 updateIndicators(index);
+                updateNavLinks(currentSection);
             }
         });
 
@@ -35,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Update the indicators
     function updateIndicators(activeIndex) {
         indicators.forEach((indicator, index) => {
             if (index === activeIndex) {
@@ -46,21 +46,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Hide indicators when Offcanvas is shown
+    function updateNavLinks(currentSection) {
+        navLinks.forEach(link => {
+            if (link.getAttribute('href').includes(currentSection)) {
+                link.classList.add('active-link'); // Lägg till en klass för aktiv länk
+            } else {
+                link.classList.remove('active-link');
+            }
+        });
+    }
+
     offcanvasMenu.addEventListener('show.bs.offcanvas', () => {
         indicators.forEach(indicator => {
             indicator.style.display = 'none';
         });
     });
 
-    // Show indicators when Offcanvas is hidden
     offcanvasMenu.addEventListener('hidden.bs.offcanvas', () => {
         indicators.forEach(indicator => {
             indicator.style.display = 'block';
         });
     });
 
-    // Fade-in animation on scroll
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
         threshold: 0.5,
@@ -82,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
         appearOnScroll.observe(fader);
     });
 
-    // Event listeners
     window.addEventListener('scroll', updateSectionInfo);
-    updateSectionInfo(); // Update on page load
+    updateSectionInfo();
 });

@@ -1,9 +1,7 @@
-/* Header Styles */
 header {
     text-align: center;
     padding: 20px;
-    background: none; /* No background color */
-    color: rgba(30, 30, 30, 0.78); /* Font color with 78% opacity */
+    color: rgba(30, 30, 30, 0.78);
 }
 
 .header-container {
@@ -11,16 +9,14 @@ header {
 }
 
 header h1 {
-    font-size: 1.5em; /* Smaller size to align with the four letters "LÅNG" */
-    margin: 0;
-    font-weight: 600; /* Semi-Bold */
-    letter-spacing: 0.5px; /* Adjusted letter spacing */
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 header h2 {
-    font-size: 2.5em; /* Size that matches the prominence needed for LÅNG */
-    margin: 10px 0 0 0; /* Top margin to space out from h1 */
-    font-weight: 700; /* Bold, giving it more weight compared to h1 */
-    letter-spacing: 0.5px; /* Adjusted letter spacing to match Jonathan */
-    color: inherit;
+    font-size: 2.5em;
+    margin-top: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }

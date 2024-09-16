@@ -1,0 +1,81 @@
+.project-segment {
+    position: relative;
+    padding: 0 0 20px 25px; /* Anpassa padding för att matcha vänstermarginalen */
+    margin-top: -2px; /* Tar bort gapet mellan linjerna så att de hänger ihop */
+    border-left: 2px solid teal; /* Teal färg för linjen */
+}
+
+.project-segment:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    left: -9px; /* Justerar cirkelns position till linjen */
+    top: 0; /* Positionerar cirkeln högst upp på varje segment */
+    background: #f4f4f4; /* Bakgrundsfärgen matchar sektionens bakgrund */
+    border: 2px solid teal; /* Teal färg för cirkelns kant */
+}
+
+.project-segment:last-child {
+    padding-bottom: 0; /* Tar bort padding på sista projektsegmentet */
+}
+
+.text-image-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.text-image-group img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-image-group p {
+    flex: 1;
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: left;
+    padding: 20px;
+}
+
+/* Styling for the project content */
+.project-segment .text-image-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px; /* Lägger till mellanrum mellan bild och text */
+}
+
+.project-segment img {
+    max-width: 40%; /* Storlek på projektbilden */
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-segment p {
+    flex: 1;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-segment .text-image-group {
+        flex-direction: column; /* Byt layout till kolumn på mindre skärmar */
+        align-items: flex-start;
+    }
+
+    .project-segment img {
+        max-width: 100%; /* Full bredd på mindre skärmar */
+    }
+}

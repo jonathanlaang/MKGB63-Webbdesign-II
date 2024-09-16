@@ -1,66 +1,3 @@
-/* Global Styles */
-body, html {
-    background-color: #f4f4f4; /* Matches the section background */
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-}
-
-/* Header Styles */
-header {
-    text-align: center;
-    padding: 20px;
-    background: none; /* No background color */
-    color: rgba(30, 30, 30, 0.78); /* Font color with 78% opacity */
-}
-
-.header-container {
-    display: inline-block;
-}
-
-header h1 {
-    font-size: 1.5em; /* Smaller size to align with the four letters "LÅNG" */
-    margin: 0;
-    font-weight: 600; /* Semi-Bold */
-    letter-spacing: 0.5px; /* Adjusted letter spacing */
-}
-
-header h2 {
-    font-size: 2.5em; /* Size that matches the prominence needed for LÅNG */
-    margin: 10px 0 0 0; /* Top margin to space out from h1 */
-    font-weight: 700; /* Bold, giving it more weight compared to h1 */
-    letter-spacing: 0.5px; /* Adjusted letter spacing to match Jonathan */
-    color: inherit;
-}
-
-/* General Section Styling */
-.content-section {
-    padding: 40px 20px;
-    margin-bottom: 40px;
-    position: relative;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* About Me Section Title Alignment */
-#about-me .section-header h2 {
-    font-size: 2em;
-    font-weight: 700;
-    text-align: left; /* Left align */
-    margin-bottom: 40px;
-    margin-left: calc(16.6667%); /* Align with the second column (2/6) */
-    color: rgba(30, 30, 30, 0.78);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
-}
-
 /* Section Content Layout */
 .section-content {
     display: flex;
@@ -69,31 +6,8 @@ header h2 {
     justify-content: center;
 }
 
-/* Text and Image Group Layout */
-.text-image-group {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px; /* Set a max-width for content alignment */
-    margin-bottom: 40px;
-}
 
-.text-image-group img {
-    max-width: 40%; /* Adjusted width for image */
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.text-image-group p {
-    flex: 1;
-    font-size: 1.2em;
-    line-height: 1.6;
-    text-align: left;
-    padding: 20px;
-}
 
 .section-content .indicator {
     font-size: 2em;
@@ -130,26 +44,9 @@ header h2 {
     }
 }
 
-/* Section Background Decoration */
-section:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
 
-/* Heading Styles */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-}
 
-/* Paragraph Styles */
-p {
-    font-weight: 300;
-}
+
 
 /* Bottom Navigation Bar Styles */
 #bottomNav {
@@ -257,31 +154,9 @@ p {
     height: auto;
 }
 
-/* Video Styling */
-video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.embed-responsive {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding: 0;
-    overflow: hidden;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
 
-.embed-responsive-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
+
 
 /* Offcanvas Menu Enhancements */
 .offcanvas-header {

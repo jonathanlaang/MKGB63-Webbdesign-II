@@ -1,42 +1,68 @@
-/* Global Styles */
 body, html {
-    background-color: #f4f4f4; /* Matches the section background */
-}
-
-body {
+    background-color: #f4f4f4;
     font-family: 'Poppins', sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
-    line-height: 1;
+    line-height: 1.6;
 }
 
-/* Heading Styles */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-/* Paragraph Styles */
 p {
     font-weight: 300;
+    margin: 0 0 1.5em;
 }
 
-/* Vector Image Styling */
-.vector-image {
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+video {
     max-width: 100%;
     height: auto;
-    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.embed-responsive-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .text-image-group {
-        flex-direction: row; /* Keep row layout on mobile */
-        text-align: left; /* Keep text left-aligned */
+        flex-direction: row;
+        text-align: left;
     }
 
     .text-image-group img {
-        max-width: 40%; /* Maintain image size */
+        max-width: 40%;
         margin-bottom: 0;
     }
 
