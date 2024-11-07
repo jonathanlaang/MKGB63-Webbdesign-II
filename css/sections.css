@@ -1,26 +1,101 @@
+/* SECTIONS STYLES */
+
+/* Grundläggande styling för alla innehållssektioner */
 .content-section {
-    padding: 40px 20px;
-    margin-bottom: 40px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px; /* Fixerad padding för att skapa en enhetlig layout inom varje sektion */
+    margin-bottom: 40px; /* Avstånd mellan sektionerna */
+    background-color: #f4f4f4; /* Lätt bakgrundsfärg för att separera sektionerna visuellt */
+    border-radius: 8px; /* Rundade hörn för mjukare layout */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga för visuellt djup */
     position: relative;
 }
 
+/* Slide in from the left */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide in from the right */
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Specifik styling för About Me-sektionens rubrik */
 #about-me .section-header h2 {
-    font-size: 2em;
-    font-weight: 700;
+    font-size: 2em; /* Större fontstorlek för rubriken */
+    font-weight: 700; /* Tydlig vikt för att framhäva rubriken */
     text-align: left;
     margin-bottom: 40px;
-    margin-left: calc(16.6667%); /* Align with the second column (2/6) */
+    margin-left: calc(16.6667%); /* Justering för att linjera rubriken med andra kolumner */
     color: #333333;
-    text-decoration: underline;
+    text-decoration: underline; /* Understrykning för att betona rubriken */
     text-underline-offset: 4px;
     text-decoration-thickness: 2px;
 }
 
+/* Gemensam styling för projektsegment */
+.project-segment {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling för text och bildgrupp i innehållssektioner */
+.text-image-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Styling för rubriker inom varje sektion */
+.section-header {
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 2rem; /* Fixerad fontstorlek för att framhäva rubriken */
+    color: #3b9ea3; /* Accentfärg för att skapa visuell kontrast */
+}
+
+/* Responsiva anpassningar för text och bild */
+@media (min-width: 768px) {
+    .text-image-group {
+        flex-direction: row; /* Ändrar layout till rad för större skärmar */
+        text-align: left;
+    }
+
+    .text-image-group img {
+        max-width: 40%;
+        margin-bottom: 0;
+    }
+
+    .text-image-group p {
+        text-align: left;
+        padding: 20px; /* Fastsatt padding för att ge utrymme kring text */
+    }
+}
+
+/* Vektorbilders styling för enhetlighet */
 .vector-image {
-    max-width: 100%;
+    max-width: 100%; /* Förhindra att bilden överskrider sektionens bredd */
     height: auto;
     margin-top: 40px;
 }

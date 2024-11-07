@@ -1,31 +1,35 @@
+/* PRELOADER STYLES */
+
+/* Basinställningar för preloader */
 #preloader {
-    position: fixed;
-    inset: 0;
-    z-index: 999999;
-    overflow: hidden;
-    background: #f4f4f4;
-    transition: all 0.6s ease-out;
+  position: fixed; /* Fixerad position för att täcka hela skärmen */
+  inset: 0; /* Topp, höger, botten och vänster inställda till 0 för att täcka hela viewporten */
+  z-index: 999999; /* Sätter högsta möjliga z-index för att säkerställa synlighet över allt annat innehåll */
+  overflow: hidden; /* Förhindrar rullning medan preloadern visas */
+  background: #f4f4f4; /* Ljus bakgrundsfärg som matchar sidans övergripande färgschema */
+  transition: all 0.6s ease-out; /* Smooth transition för att gömma preloadern */
+}
+
+/* Animerad ikon för preloader */
+#preloader:before {
+  content: ""; /* Tomt innehåll för den animerade ikonen */
+  position: fixed;
+  top: calc(50% - 30px); /* Centrerar vertikalt */
+  left: calc(50% - 30px); /* Centrerar horisontellt */
+  border: 6px solid #ffffff; /* Yttre kantfärg */
+  border-color: #26787c transparent rgb(121, 190, 190) transparent; /* Färgade kanter för animation */
+  border-radius: 50%; /* Rund form */
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1.5s linear infinite; /* Rotationseffekt för en konstant loop */
+}
+
+/* Keyframes för rotationseffekt */
+@keyframes animate-preloader {
+  0% {
+      transform: rotate(0deg); /* Startar rotation vid 0 grader */
   }
-  
-  #preloader:before {
-    content: "";
-    position: fixed;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    border: 6px solid #ffffff;
-    border-color: #26787c transparent rgb(121, 190, 190) transparent;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: animate-preloader 1.5s linear infinite;
+  100% {
+      transform: rotate(360deg); /* Slutför en rotation vid 360 grader */
   }
-  
-  @keyframes animate-preloader {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+}

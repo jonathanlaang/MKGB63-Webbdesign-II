@@ -105,6 +105,8 @@
     100% { background-position: 100% 50%; }
 }
 
+/* RESPONSIVE DESIGN */
+
 @media (max-width: 768px) {
     .project-segment .text-image-group {
         flex-direction: column;

@@ -1,62 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 
-/* .footer-nav {
-    padding: 20px 0;
-    text-align: center;
-}
+/* FOOTER STYLES */
 
-.footer-links .list-inline-item {
-    margin: 0 10px;
-}
-
-.footer-links .list-inline-item a {
-    text-decoration: none;
-    color: #3C9DA3;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.footer-links .list-inline-item a:hover {
-    color: rgb(121, 190, 190);
-} */
-
-
+/* Grundläggande layout för footern */
 .footer {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 6rem;
+    margin-top: 3rem; /* Marginal över fotern för tydlig separation från innehållet ovanför */
+    margin-bottom: 6rem; /* Extra marginal nedåt för att ge luft mellan footer och botten av sidan */
 }
 
+/* Styling för text i footern */
 .footer p {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond", serif; /* Elegant typsnitt för att ge en personlig stil */
     font-weight: 500;
     font-style: italic;
-    font-size: 1.4em;
-    color: #26787c;
+    font-size: 1.4em; /* Fastsatt storlek för tydlighet och konsekvens */
+    color: #26787c; /* Accentfärg för att matcha sidans färgschema */
 }
 
-/* .footer a {
-    margin: 0;
-} */
-
+/* Länkar i footern */
 .footer-links a {
-    color: #3C9DA3;
+    color: #3C9DA3; /* Primär länkfärg för visuell enhetlighet */
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 10px; /* Mellanrum mellan länkarna för läsbarhet */
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
-    color: rgb(121, 190, 190)
+    text-decoration: underline; /* Understrykning för att indikera hovring */
+    color: rgb(121, 190, 190); /* Ljusare ton på hovring för kontrast */
 }
 
+/* Sociala medieikoner i footern */
 .social-links i {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Stor fontstorlek för att göra ikonerna mer framträdande */
     color: #3C9DA3;
-    margin: 0 5px;
+    margin: 0 5px; /* Små mellanrum mellan ikonerna */
 }
 
 .social-links i:hover {
-    color: rgb(121, 190, 190)
+    color: rgb(121, 190, 190); /* Hovringseffekt för att skapa visuell feedback */
 }

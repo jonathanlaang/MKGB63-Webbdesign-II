@@ -1,32 +1,37 @@
-body,
-html {
+/* GLOBAL STYLES */
+
+/* Grundläggande reset för att ta bort standard padding och margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basinställningar för body och html */
+body, html {
     background-color: #f4f4f4;
     font-family: 'Poppins', sans-serif;
     color: #333;
-    margin: 0;
-    padding: 0;
     line-height: 1.6;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Rubriker för en enhetlig stil genom hela sidan */
+h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
+/* Paragrafer med maxhöjd för att hantera överflödigt innehåll */
 p {
     font-weight: 300;
-    max-height: 20rem;
-    overflow-y: auto;
+    max-height: 20rem; /* Fixerad maxhöjd för att kontrollera textflöde */
+    overflow-y: auto;  /* Lägg till scrollbar om innehållet överskrider maxhöjden */
 }
 
+/* Fade-in effekt för element som ska animera vid scroll */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; /* Effektens varaktighet och typ */
 }
 
 .fade-in.visible {
@@ -34,21 +39,33 @@ p {
     transform: translateY(0);
 }
 
+/* Scale-up animationseffekt */
+.scale-up {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.scale-up.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Videostyling med border-radius och skugga för visuellt djup */
 video {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga för bättre kontrast */
 }
 
+/* Inbäddad video för responsiv anpassning */
 .embed-responsive {
     position: relative;
     display: block;
     width: 100%;
-    padding: 0;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
     overflow: hidden;
-    padding-top: 56.25%;
-    /* 16:9 Aspect Ratio */
 }
 
 .embed-responsive-item {
@@ -60,24 +77,22 @@ video {
     border: 0;
 }
 
-/* Responsive Adjustments */
+/* RESPONSIV JUSTERING */
+
+/* Anpassningar för mindre skärmar */
 @media (max-width: 768px) {
     .text-image-group {
-        flex-direction: row;
+        flex-direction: row; /* Ändrar layout till radformat */
         text-align: left;
     }
 
     .text-image-group img {
-        max-width: 40%;
+        max-width: 40%; /* Begränsar bildbredd på små skärmar */
         margin-bottom: 0;
     }
 
     .text-image-group p {
         text-align: left;
         padding: 20px;
-    }
-
-    .text-image-group .indicator {
-        display: block;
     }
 }

@@ -1,22 +1,59 @@
+/* HEADER STYLES */
+
+/* Grundläggande styling för header */
 header {
     text-align: center;
     padding: 20px;
-    color: rgba(30, 30, 30, 0.78);
+    color: rgba(30, 30, 30, 0.78); /* Mild färgton för texten */
 }
 
+/* Container för rubriker i header */
 .header-container {
-    display: inline-block;
+    display: inline-block; /* Håller rubriker centrerade */
 }
 
+/* Första rubriknivån i header */
 header h1 {
     font-size: 1.5em;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.5px; /* Lätt avstånd mellan bokstäver för bättre läsbarhet */
 }
 
+/* Andra rubriknivån i header */
 header h2 {
     font-size: 2.5em;
     margin-top: 10px;
-    font-weight: 700;
+    font-weight: 700; /* Tyngre vikt för att skapa en tydlig hierarki */
     letter-spacing: 0.5px;
+}
+
+/* Animation för header-övergångar */
+.header-container h1,
+.header-container h2 {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Keyframes för header-animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Startpunkt ovanför den faktiska positionen */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Slutposition för smidig övergång */
+    }
+}
+
+/* RESPONSIVA JUSTERINGAR */
+
+/* Justering för små skärmar */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2em; /* Mindre textstorlek på mobila enheter */
+    }
+
+    header h2 {
+        font-size: 2em; /* Mindre textstorlek för att passa mobilvyn */
+    }
 }

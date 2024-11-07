@@ -1,15 +1,68 @@
+/* RESPONSIVE STYLES */
+
+/* Anpassningar för skärmar mindre än 768px */
 @media (max-width: 768px) {
+
+    /* Justeringar för text och bildlayout i text-image-gruppen */
     .text-image-group {
-        flex-direction: column;
+        flex-direction: column; /* Ändrar till kolumnlayout för mobilanpassning */
         text-align: center;
     }
 
     .text-image-group img {
-        max-width: 100%;
+        max-width: 80%; /* Begränsar bildbredden på mobila enheter */
         margin-bottom: 20px;
     }
 
-    .text-image-group p {
-        padding: 0 10px;
+    /* Justeringar för avsnittens rubriker */
+    .section-header {
+        font-size: 1.2rem; /* Minskar rubrikstorlek för att passa mobilvyn */
+        margin-bottom: 15px;
+    }
+
+    /* Justeringar för projektbeskrivningstext */
+    .project-segment p {
+        padding: 0 10px; /* Mindre padding för bättre utrymme på små skärmar */
+    }
+
+    /* Justering för bildstorlek i karusellen på mobila enheter */
+    .carousel-inner .carousel-item img {
+        max-height: 60vh; /* Sänker maxhöjden på bilder för att passa mobil */
+        object-fit: cover;
+    }
+
+    /* Footer-text för bättre läsbarhet på mindre skärmar */
+    .footer p {
+        font-size: 0.9em;
+    }
+}
+
+/* Anpassningar för skärmar större än 768px men mindre än 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+
+    /* Sektionens padding för att ge mer utrymme mellan komponenterna */
+    .content-section {
+        padding: 3rem 1.5rem;
+    }
+
+    /* Justeringar för text och bildlayout i text-image-gruppen */
+    .text-image-group {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    /* Begränsar bredden på bilderna för att undvika överflödigt utrymme */
+    .text-image-group img {
+        max-width: 40%;
+        margin-bottom: 0;
+    }
+}
+
+/* Anpassningar för större skärmar (över 1200px) */
+@media (min-width: 1200px) {
+
+    /* Förstorar rubrikstorlek för stora skärmar */
+    .section-header h2 {
+        font-size: 2.5rem; /* Skapar bättre balans och fyllighet på breda skärmar */
     }
 }

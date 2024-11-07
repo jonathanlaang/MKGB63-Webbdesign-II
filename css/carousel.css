@@ -1,31 +1,36 @@
+/* CAROUSEL STYLES */
+
+/* Basinställningar för karusellen */
 #spareTimeCarousel {
-    max-width: 90vw;
-    max-height: 75vh;
-    margin: auto;
+    max-width: 90vw; /* Begränsad bredd för att ge visuellt utrymme runt karusellen */
+    margin: auto; /* Centrering av karusellen på sidan */
 }
 
+/* Justering av karusellens inre höjd */
 .carousel-inner {
-    max-height: 75vh;
+    max-height: 100vh; /* Anpassar höjden för att fylla skärmen */
 }
 
-.carousel-item img {
-    object-fit: contain;
+/* Bilder i karusellen */
+.carousel-item img.carousel-img {
     width: 100%;
-    height: auto;
-    max-height: 75vh;
+    height: 100vh; /* Fyller hela viewport-höjden */
+    object-fit: cover; /* Fyller utrymmet utan att snedvrida bilderna */
+    border-radius: 8px;
 }
 
+/* Kontroller för karusellen */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: none;
-    background-color: #3C9DA3;
-    border-radius: 50%;
+    background-color: #3C9DA3; /* Färg på kontroller för bättre synlighet */
+    border-radius: 50%; /* Rund form för kontroller */
     width: 40px;
     height: 40px;
     background-size: 60%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Lätt skugga för djupkänsla */
 }
 
+/* Captions för karusellbilder */
 .carousel-caption {
     position: absolute;
     bottom: 0;
@@ -33,7 +38,7 @@
     right: 0;
     padding: 10px;
     color: #ffffff;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Halvgenomskinlig bakgrund för läsbarhet */
     text-align: center;
     max-width: 100%;
     margin: 0;
@@ -42,9 +47,17 @@
     -webkit-backdrop-filter: blur(5px);
 }
 
+/* Justeringar för mindre skärmar */
 @media (max-width: 768px) {
     .carousel-caption {
         font-size: 0.9em;
-        padding: 8px;
+        padding: 8px; /* Mindre padding för att passa mindre skärmar */
+    }
+}
+
+/* Mobilanpassning för att säkerställa rundade hörn */
+@media (max-width: 768px) {
+    .carousel-item img {
+        border-radius: 8px !important;
     }
 }
