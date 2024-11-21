@@ -1,20 +1,23 @@
 /* --- GLOBAL STYLES --- */
 
+
 /* General reset to remove default padding and margin */
 * {
     margin: 0; /* Removes all default margins */
     padding: 0; /* Removes all default padding */
+    max-width: 100%;
     box-sizing: border-box; /* Ensures padding and border are included in element size */
-    /* background: rgb(0 100 0 / 0.1) !important; */ /* Uncomment for debugging layout (if needed) */
+    /* background: rgb(0 100 0 / 0.1) !important;   Uncomment for debugging layout (if needed) */
 }
 
 /* Base styles for body and html */
 /* Sets the overall appearance and typography for the entire page */
-body, html {
+html, body {
     background-color: #f4f4f4; /* Light gray background for a clean look */
     font-family: 'Poppins', sans-serif; /* Modern sans-serif font */
     color: #333; /* Neutral text color for readability */
     line-height: 1.6; /* Enhances text readability */
+
 }
 
 /* Headings styling */

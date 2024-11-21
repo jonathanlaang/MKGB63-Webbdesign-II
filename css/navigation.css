@@ -1,119 +1,119 @@
-/* NAVIGATION STYLES */
+/* --- NAVIGATION STYLES --- */
 
 /* Styling for the bottom navigation bar */
+/* Provides a fixed navigation bar with a clean and modern look */
 #bottomNav {
-    background-color: #f8f9fa;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #ddd;
-    border-radius: 15px 15px 0 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Adds slight shadow for depth */
+    background-color: #f8f9fa; /* Neutral background for navigation */
+    padding: 15px; /* Adds spacing inside the navigation bar */
+    display: flex; /* Aligns children in a horizontal layout */
+    justify-content: space-between; /* Distributes space between navigation items */
+    align-items: center; /* Centers items vertically */
+    border-top: 1px solid #ddd; /* Adds a subtle border for separation */
+    border-radius: 15px 15px 0 0; /* Rounded corners at the top */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Container for navigation icons */
+/* Styles navigation icons with a circular background and hover effects */
 .nav-icon-container {
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
+    background-color: #e0e0e0; /* Light gray background for icons */
+    border-radius: 50%; /* Circular shape */
+    width: 50px; /* Fixed width for uniformity */
+    height: 50px; /* Fixed height for uniformity */
+    display: flex; /* Centers the icon inside the circle */
     justify-content: center;
     align-items: center;
-    transition: background-color 0.4s ease-out, color 0.4s ease-out; /* Smooth transition on hover */
+    transition: background-color 0.4s ease-out, color 0.4s ease-out; /* Smooth hover transitions */
 }
 
 /* Hover effect for navigation icons */
+/* Enhances visual feedback on hover */
 .nav-icon-container:hover {
-    background-color: #3c9ea3d1; /* Change background on hover */
-    color: white; /* Optional color change for icons */
+    background-color: #3c9ea3d1; /* Changes background color on hover */
+    color: white; /* Optional color change for the icon */
 }
 
 /* Section title display within navigation */
+/* Adds a stylized section title with underline effects */
 #sectionTitle {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: rgba(30, 30, 30, 0.78);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
-    position: relative;
+    font-weight: bold; /* Emphasizes the title text */
+    font-size: 1.2em; /* Moderate size for readability */
+    color: rgba(30, 30, 30, 0.78); /* Subtle text color */
+    text-decoration: underline; /* Adds underline for visual focus */
+    text-underline-offset: 4px; /* Spaces underline from text */
+    text-decoration-thickness: 2px; /* Bold underline thickness */
+    position: relative; /* Allows animation positioning */
     display: inline-block;
-    overflow: hidden;
-    height: 1.2em; /* Matches font size */
-    line-height: 1.2em;
-    user-select: none; /* Prevents text selection */
+    overflow: hidden; /* Prevents content overflow during animations */
+    height: 1.2em; /* Matches font size for alignment */
+    line-height: 1.2em; /* Ensures consistent vertical spacing */
+    user-select: none; /* Disables text selection */
 }
 
 /* Animation for section title transition */
+/* Creates a flipping effect for section titles */
 .flip {
-    display: inline-block;
-    animation: flip 0.6s ease-in-out forwards;
+    display: inline-block; /* Allows animation within the inline context */
+    animation: flip 0.6s ease-in-out forwards; /* Smooth animation for title transition */
 }
 
 @keyframes flip {
     0% {
-        transform: translateY(0%);
+        transform: translateY(0%); /* Starts at the original position */
         opacity: 1;
     }
     50% {
-        transform: translateY(-100%);
+        transform: translateY(-100%); /* Moves out of view upwards */
         opacity: 0;
     }
     50.1% {
-        transform: translateY(100%);
+        transform: translateY(100%); /* Starts re-entering from the bottom */
         opacity: 0;
     }
     100% {
-        transform: translateY(0%);
+        transform: translateY(0%); /* Returns to the original position */
         opacity: 1;
     }
 }
 
 /* Navbar toggler icon */
+/* Styles the icon used for toggling the navigation bar */
 .navbar-toggler {
-    background: none;
-    border: none;
-    padding: 0;
-    outline: none;
+    background: none; /* Removes default button styling */
+    border: none; /* Removes border for a clean look */
+    padding: 0; /* Removes unnecessary padding */
+    outline: none; /* Hides focus outline */
 }
 
 .navbar-toggler i {
-    font-size: 1.5em;
-    color: rgba(30, 30, 30, 0.78);
+    font-size: 1.5em; /* Scales the icon size */
+    color: rgba(30, 30, 30, 0.78); /* Matches the section title color */
 }
 
 /* Section indicators for scroll position */
+/* Adds circular indicators to show the user's current section */
 .indicator {
     display: block;
-    width: 10px;
-    height: 10px;
-    margin: 10px 0;
-    border: 2px solid teal;
-    border-radius: 50%;
-    z-index: 9999;
+    width: 10px; /* Fixed width for uniform indicators */
+    height: 10px; /* Fixed height for uniform indicators */
+    margin: 10px 0; /* Adds spacing between indicators */
+    border: 2px solid teal; /* Border color for visibility */
+    border-radius: 50%; /* Creates circular indicators */
+    z-index: 9999; /* Ensures visibility over other elements */
 }
 
+/* Filled state for active section indicator */
+/* Highlights the current section indicator */
 .filled {
-    background-color: teal;
+    background-color: teal; /* Fills the active indicator */
 }
 
 /* Positioning for indicators */
+/* Fixes indicators to the side of the viewport */
 #sectionIndicators {
-    position: fixed;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    z-index: 9999;
-}
-
-@media (max-width: 768px) {
-    #bottomNav {
-        padding: 0.5rem; /* Adjusted padding for mobile */
-    }
-
-    #sectionTitle {
-        font-size: 0.9rem; /* Smaller font on mobile */
-    }
+    position: fixed; /* Keeps indicators in place during scrolling */
+    top: 50%; /* Centers vertically */
+    left: 10px; /* Positions on the left side */
+    transform: translateY(-50%); /* Centers using translation */
+    z-index: 9999; /* Keeps indicators on top */
 }

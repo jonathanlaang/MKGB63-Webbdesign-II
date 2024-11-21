@@ -1,105 +1,127 @@
-/* MAIN STYLES */
+/* --- MAIN STYLES --- */
 
-/* Section Content Layout */
+/* Layout for section content */
+/* Ensures consistent alignment and spacing for section content */
 .section-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    display: flex; /* Enables flexible alignment */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: flex-start; /* Aligns items to the start of the section */
+    justify-content: center; /* Centers content vertically within the container */
 }
 
-/* Indicator Styling */
+/* Styling for indicators within sections */
+/* Adds visual emphasis to section indicators */
 .section-content .indicator {
-    font-size: 2em;
-    color: #3C9DA3;
-    margin: 0 20px;
+    font-size: 2em; /* Larger font size for prominence */
+    color: #3C9DA3; /* Accent color for indicators */
+    margin: 0 20px; /* Adds spacing around indicators */
 }
 
-/* Wave Container for Decorative Effect */
+/* Decorative wave container */
+/* Adds a full-width wave effect for visual separation between sections */
 .wave-container {
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
+    width: 100%; /* Ensures wave spans the full width of the viewport */
+    overflow: hidden; /* Prevents content from overflowing */
+    z-index: 1; /* Places wave behind content */
 }
 
 .wave-line {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Full-width wave line */
+    height: auto; /* Maintains aspect ratio */
 }
 
+/* SVG styling for waves */
+/* Ensures SVGs scale properly */
 .wave-container svg {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Scales to fit the container */
+    height: auto; /* Maintains aspect ratio */
 }
 
-/* BOTTOM NAVIGATION STYLES */
+/* --- BOTTOM NAVIGATION STYLES --- */
 
+/* Styling for the bottom navigation bar */
+/* Provides a clean and modern design for navigation */
 #bottomNav {
-    background-color: #f8f9fa;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #ddd;
-    border-radius: 15px 15px 0 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa; /* Neutral background color */
+    padding: 15px; /* Adds space inside the navigation bar */
+    display: flex; /* Aligns items horizontally */
+    justify-content: space-between; /* Distributes navigation items evenly */
+    align-items: center; /* Centers items vertically */
+    border-top: 1px solid #ddd; /* Adds a subtle top border for separation */
+    border-radius: 15px 15px 0 0; /* Rounds the top corners */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
 }
 
-/* Icon Container for Navigation */
+/* Icon container for navigation */
+/* Creates a circular container for navigation icons */
 .nav-icon-container {
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
+    background-color: #e0e0e0; /* Light gray background for icons */
+    border-radius: 50%; /* Circular shape */
+    width: 50px; /* Ensures consistent size across navigation icons */
+    height: 50px; /* Fixed size for uniformity */
+    display: flex; /* Centers the icon inside the circle */
     justify-content: center;
     align-items: center;
 }
 
+/* Icon styling within the navigation container */
+/* Ensures icons are large enough for clarity */
 .nav-icon-container i {
-    font-size: 1.5em;
-    color: rgba(30, 30, 30, 0.78);
+    font-size: 1.5em; /* Moderate size for icons */
+    color: rgba(30, 30, 30, 0.78); /* Subtle text color */
 }
 
+/* Styling for section titles */
+/* Emphasizes section titles with underlines */
 #sectionTitle {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: rgba(30, 30, 30, 0.78);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
+    font-weight: bold; /* Bold font for emphasis */
+    font-size: 1.2em; /* Moderate font size */
+    color: rgba(30, 30, 30, 0.78); /* Subtle color tone */
+    text-decoration: underline; /* Adds underline for focus */
+    text-underline-offset: 4px; /* Space between text and underline */
+    text-decoration-thickness: 2px; /* Bold underline */
 }
 
-/* Navbar Toggler Styling */
+/* --- NAVBAR TOGGLER STYLES --- */
+
+/* Styling for the navbar toggler */
+/* Ensures a clean, minimalistic appearance */
 .navbar-toggler {
-    background: none;
-    border: none;
-    padding: 0;
-    outline: none;
+    background: none; /* Removes default background */
+    border: none; /* Removes default border */
+    padding: 0; /* Removes default padding */
+    outline: none; /* Hides focus outline */
 }
 
 .navbar-toggler i {
-    font-size: 1.5em;
-    color: rgba(30, 30, 30, 0.78);
+    font-size: 1.5em; /* Adjusts icon size for visibility */
+    color: rgba(30, 30, 30, 0.78); /* Matches section title color */
 }
 
-/* Section Indicator Placement */
+/* --- SECTION INDICATORS --- */
+
+/* Fixed positioning for section indicators */
+/* Positions indicators on the left side of the viewport */
 #sectionIndicators {
-    position: fixed;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    z-index: 9999;
+    position: fixed; /* Keeps indicators in place during scrolling */
+    top: 50%; /* Centers vertically */
+    left: 10px; /* Positions indicators near the left edge */
+    transform: translateY(-50%); /* Centers indicators using translation */
+    z-index: 9999; /* Ensures indicators are on top of other content */
 }
 
-/* Fade-In Effect for Scroll Animation */
+/* --- ANIMATION STYLES --- */
+
+/* Fade-in effect for scroll-triggered animation */
+/* Adds smooth transition effects to elements entering the viewport */
 .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.7s ease-in-out;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Starts slightly below its final position */
+    transition: all 0.7s ease-in-out; /* Smooth transition over 0.7 seconds */
+    will-change: opacity, transform;
 }
 
 .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Returns to its original position */
 }

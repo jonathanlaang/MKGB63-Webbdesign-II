@@ -1,93 +1,75 @@
-/* SECTIONS STYLES */
+/* --- SECTIONS STYLES --- */
 
-/* Grundläggande styling för alla innehållssektioner */
+/* General styling for all content sections */
+/* Provides consistent spacing, layout, and visual separation for sections */
 .content-section {
-    padding: 40px 20px; /* Fixerad padding för att skapa en enhetlig layout inom varje sektion */
-    margin-bottom: 40px; /* Avstånd mellan sektionerna */
-    background-color: #f4f4f4; /* Lätt bakgrundsfärg för att separera sektionerna visuellt */
-    border-radius: 8px; /* Rundade hörn för mjukare layout */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga för visuellt djup */
-    position: relative;
+    padding: 40px 20px; /* Uniform padding inside each section */
+    margin-bottom: 40px; /* Adds spacing between sections */
+    background-color: #f4f4f4; /* Light background color for better visual separation */
+    border-radius: 8px; /* Smooth corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative; /* Allows for positioned children or overlays */
+    overflow: hidden; /* Prevent elements from overflowing */
 }
 
-/* Slide in from the left */
-.slide-in-left {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 0.8s ease-out;
+/* Ensures animations can render fully within the text-image group */
+.content-section, .text-image-group {
+    overflow: visible !important; /* Enables visibility for animations specifically */
 }
 
-.slide-in-left.visible {
-    opacity: 1;
-    transform: translateX(0);
+/* Animation styles for sliding elements */
+.slide-in-left, .slide-in-right {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(0); /* Ensure proper alignment */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transitions */
+    will-change: opacity, transform; /* Hints the browser to optimize for these properties */
 }
 
-/* Slide in from the right */
-.slide-in-right {
-    opacity: 0;
-    transform: translateX(100px);
-    transition: all 0.8s ease-out;
+.slide-in-left.visible, .slide-in-right.visible {
+    opacity: 1; /* Becomes visible */
+    transform: translateX(0); /* Resets position */
 }
 
-.slide-in-right.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Specifik styling för About Me-sektionens rubrik */
+/* Specific styling for the About Me section header */
+/* Enhances the About Me section header for emphasis */
 #about-me .section-header h2 {
-    font-size: 2em; /* Större fontstorlek för rubriken */
-    font-weight: 700; /* Tydlig vikt för att framhäva rubriken */
-    text-align: left;
-    margin-bottom: 40px;
-    margin-left: calc(16.6667%); /* Justering för att linjera rubriken med andra kolumner */
-    color: #333333;
-    text-decoration: underline; /* Understrykning för att betona rubriken */
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
+    font-size: 2em; /* Larger font size for prominence */
+    font-weight: 700; /* Bold text for emphasis */
+    text-align: left; /* Aligns text to the left */
+    margin-bottom: 40px; /* Adds spacing below the header */
+    margin-left: calc(16.6667%); /* Aligns with grid system for consistent layout */
+    color: #333333; /* Dark gray color for contrast */
+    text-decoration: underline; /* Adds an underline for emphasis */
+    text-underline-offset: 4px; /* Creates spacing between text and underline */
+    text-decoration-thickness: 2px; /* Bold underline thickness */
 }
 
-
-/* Styling för text och bildgrupp i innehållssektioner */
+/* Styling for text and image groups in content sections */
+/* Creates a flexible layout for text and images */
 .text-image-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    display: flex; /* Enables flexible layout */
+    flex-direction: column; /* Stacks content vertically by default */
+    align-items: center; /* Centers content horizontally */
+    gap: 1rem; /* Adds spacing between items */
+    margin-bottom: 2rem; /* Adds spacing below the group */
+    overflow: hidden; /* Prevents content from overflowing */
 }
 
-/* Styling för rubriker inom varje sektion */
+/* Styling for section headers */
+/* Ensures consistent styling for headers in all sections */
 .section-header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Adds spacing below the header */
 }
 
 .section-header h2 {
-    font-size: 2rem; /* Fixerad fontstorlek för att framhäva rubriken */
-    color: #3b9ea3; /* Accentfärg för att skapa visuell kontrast */
+    font-size: 2rem; /* Fixed size for emphasis */
+    color: #3b9ea3; /* Accent color for contrast */
 }
 
-/* Responsiva anpassningar för text och bild */
-@media (min-width: 768px) {
-    .text-image-group {
-        flex-direction: row; /* Ändrar layout till rad för större skärmar */
-        text-align: left;
-    }
-
-    .text-image-group img {
-        max-width: 40%;
-        margin-bottom: 0;
-    }
-
-    .text-image-group p {
-        text-align: left;
-        padding: 20px; /* Fastsatt padding för att ge utrymme kring text */
-    }
-}
-
-/* Vektorbilders styling för enhetlighet */
+/* Styling for vector images */
+/* Ensures consistent size and spacing for vector graphics */
 .vector-image {
-    max-width: 100%; /* Förhindra att bilden överskrider sektionens bredd */
-    height: auto;
-    margin-top: 40px;
+    max-width: 100%; /* Prevents images from exceeding section width */
+    height: auto; /* Maintains aspect ratio */
+    margin-top: 40px; /* Adds spacing above vector images */
 }

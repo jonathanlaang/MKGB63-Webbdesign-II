@@ -1,112 +1,114 @@
-/* Offcanvas General Styling */
+/* --- OFFCANVAS STYLES --- */
+
+/* Header styling for offcanvas */
+/* Adds a subtle border for separation in the header */
 .offcanvas-header {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; /* Subtle bottom border for separation */
 }
 
+/* Body styling for offcanvas */
+/* Ensures a structured layout for offcanvas content */
 .offcanvas-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 20px;
+    display: flex; /* Flexible layout for content */
+    flex-direction: column; /* Arranges items vertically */
+    justify-content: flex-start; /* Aligns items to the top */
+    padding-top: 20px; /* Adds spacing at the top */
 }
 
+/* Navigation styles */
+/* Ensures proper spacing and alignment for navbar elements */
 .navbar-nav {
-    margin-bottom: 20px;
-    padding-left: 0;
+    margin-bottom: 20px; /* Adds spacing below navigation items */
+    padding-left: 0; /* Removes default padding for alignment */
 }
 
 .nav-item {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Adds spacing between navigation items */
 }
 
-/* Social Media Links */
+/* --- SOCIAL MEDIA LINKS --- */
+
+/* Styling for social media links */
+/* Ensures proper alignment and hover effects for social links */
 .social-links a {
-    display: flex;
-    align-items: center;
-    font-size: 1.1em;
-    font-weight: 500;
-    padding: 10px 0;
-    color: rgba(30, 30, 30, 0.78);
-    text-decoration: none;
+    display: flex; /* Centers icons and text horizontally */
+    align-items: center; /* Aligns items vertically */
+    font-size: 1.1em; /* Slightly larger font for emphasis */
+    font-weight: 500; /* Medium weight for readability */
+    padding: 10px 0; /* Adds spacing around links */
+    color: rgba(30, 30, 30, 0.78); /* Neutral color for text */
+    text-decoration: none; /* Removes underlines */
 }
 
+/* Hover effect for social links */
+/* Enhances visual feedback on hover */
 .social-links a:hover {
-    color: #3C9DA3;
+    color: #3C9DA3; /* Changes to primary accent color on hover */
 }
 
-/* Icon Size */
+/* Styling for social media icons */
+/* Ensures icons are prominent and visually appealing */
 .social-links i {
-    font-size: 1.5em;
-    margin-right: 10px;
-    color: #3C9DA3;
+    font-size: 1.5em; /* Larger icon size for emphasis */
+    margin-right: 10px; /* Adds spacing between icon and text */
+    color: #3C9DA3; /* Matches accent color */
 }
 
-/* Offcanvas Close Button */
+/* --- OFFCANVAS CLOSE BUTTON --- */
+
+/* Styling for the close button */
+/* Ensures the button is clearly visible and interactive */
 .offcanvas-header .btn-close {
-    width: 50px;
+    width: 50px; /* Ensures consistent size for close buttons */
     height: 50px;
-    border-radius: 50%;
-    background-color: #e0e0e0;
-    display: flex;
+    border-radius: 50%; /* Circular button shape */
+    background-color: #e0e0e0; /* Neutral background color */
+    display: flex; /* Centers the close icon */
     justify-content: center;
     align-items: center;
-    padding: 0;
-    border: none;
-    outline: none;
+    padding: 0; /* Removes extra padding */
+    border: none; /* Removes default border */
+    outline: none; /* Removes focus outline */
 }
+
+/* Close button icon */
+/* Adds a custom "X" symbol inside the button */
 .offcanvas-header .btn-close::before {
-    content: '✕';
-    font-size: 1.5em;
-    color: rgba(30, 30, 30, 0.78);
+    content: '✕'; /* Unicode for the "X" symbol */
+    font-size: 1.5em; /* Ensures visibility */
+    color: rgba(30, 30, 30, 0.78); /* Matches text color */
 }
+
+/* Hover effect for close button */
+/* Enhances the close button's hover interaction */
 .offcanvas-header .btn-close:hover {
-    background-color: #d0d0d0;
-    /* Slightly darker background on hover */
+    background-color: #d0d0d0; /* Slightly darker background on hover */
 }
 
-/* Frosted Glass Effect for Offcanvas */
+/* --- OFFCANVAS GENERAL STYLING --- */
+
+/* Frosted glass effect for offcanvas */
+/* Creates a translucent background for the offcanvas menu */
 .offcanvas {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Applies a blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Adds compatibility for Webkit browsers */
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Subtle right border */
 }
 
-/* Navbar Link Active State */
+/* Active state for navigation links */
+/* Highlights the current active link */
 .nav-link.active-link {
-    background-color: #3C9DA3;
-    color: #fff !important;
-    border-radius: 4px;
-    padding: 5px 10px;
+    background-color: #3C9DA3; /* Primary color for the active link */
+    color: #fff !important; /* Ensures text contrast */
+    border-radius: 4px; /* Rounded corners for a modern look */
+    padding: 5px 10px; /* Adds padding around the link */
 }
 
-/* Dynamic Hover Effect for Links */
+/* Hover effect for navigation links */
+/* Adds a subtle hover effect for better interactivity */
 .nav-link:hover {
-    color: #3C9DA3;
-    background-color: rgba(60, 157, 163, 0.1);
-    border-radius: 4px;
-}
-
-/* Dark Mode Adjustments */
-@media (prefers-color-scheme: dark) {
-    .offcanvas,
-    .offcanvas-header,
-    .offcanvas-body {
-        background-color: rgba(30, 30, 30, 0.9);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        color: #fff;
-    }
-    .offcanvas .nav-link {
-        color: #ddd;
-    }
-    .offcanvas .nav-link:hover {
-        background-color: #444;
-    }
-    .social-links a {
-        color: #ddd;
-    }
-    .social-links a:hover {
-        color: #fff;
-    }
+    color: #3C9DA3; /* Changes text to primary accent color */
+    background-color: rgba(60, 157, 163, 0.1); /* Light background on hover */
+    border-radius: 4px; /* Matches active link style */
 }

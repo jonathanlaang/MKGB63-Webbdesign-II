@@ -1,5 +1,6 @@
 /* --- CAROUSEL STYLES --- */
 
+
 /* Base settings for the carousel */
 /* Restricts the width of the carousel to ensure sufficient visual spacing around it */
 #spareTimeCarousel {
@@ -47,7 +48,7 @@
     text-align: center; /* Centers the text within the caption area */
     max-width: 100%; /* Prevents captions from overflowing the carousel width */
     margin: 0;
-    border-radius: 1rem; /* Adds rounded corners to match the carousel's design */
+    border-radius: 8px; /* Adds rounded corners to match the carousel's design */
     backdrop-filter: blur(5px); /* Adds a blur effect for a frosted glass appearance */
     -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit-based browsers */
 }
