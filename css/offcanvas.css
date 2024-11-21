@@ -3,6 +3,22 @@
     border-bottom: 1px solid #ddd;
 }
 
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+.navbar-nav {
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
 /* Social Media Links */
 .social-links a {
     display: flex;

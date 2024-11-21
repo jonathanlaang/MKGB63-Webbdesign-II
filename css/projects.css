@@ -3,6 +3,7 @@
     padding: 0 0 20px 25px;
     margin-top: -2px;
     border-left: 2px solid #3C9DA3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-segment:before {

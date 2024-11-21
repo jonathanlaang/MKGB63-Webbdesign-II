@@ -108,18 +108,6 @@
     z-index: 9999;
 }
 
-/* Styling for wave line effect */
-.wave-container {
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.wave-line {
-    width: 100%;
-    height: auto;
-}
-
 @media (max-width: 768px) {
     #bottomNav {
         padding: 0.5rem; /* Adjusted padding for mobile */
