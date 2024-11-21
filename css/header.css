@@ -32,6 +32,30 @@ header h2 {
     letter-spacing: 0.5px; /* Consistent letter spacing */
 }
 
+.gradient-text {
+    /* Creates a dynamic gradient using the site's theme colors */
+    background: linear-gradient(90deg, #3C9DA3, #26787c, #74b7ed, #3b9ea3);
+    background-size: 200% 200%; /* Enlarges the gradient for smoother transitions */
+    -webkit-background-clip: text; /* Clips the gradient to the text only */
+    -webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
+    text-fill-color: transparent; /* Additional compatibility for browsers */
+    animation: gradient-animation 5s ease infinite; /* Smooth gradient animation */
+    font-weight: bold; /* Enhances visibility */
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%; /* Start at one side of the gradient */
+    }
+    50% {
+        background-position: 100% 50%; /* Move to the other side */
+    }
+    100% {
+        background-position: 0% 50%; /* Return to the original position */
+    }
+}
+
 /* Animation for header transitions */
 /* Adds a smooth fade-in effect to the header titles */
 .header-container h1,
