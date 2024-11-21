@@ -1,59 +1,52 @@
-/* HEADER STYLES */
+/* --- HEADER STYLES --- */
 
-/* Grundläggande styling för header */
+/* Basic styling for the header */
+/* Sets the overall alignment and padding for the header */
 header {
-    text-align: center;
-    padding: 20px;
-    color: rgba(30, 30, 30, 0.78); /* Mild färgton för texten */
+    text-align: center; /* Centers all text inside the header */
+    padding: 20px; /* Adds vertical spacing around the header */
+    color: rgba(30, 30, 30, 0.78); /* Subtle color tone for text */
 }
 
-/* Container för rubriker i header */
+/* Container for header titles */
+/* Keeps the header text properly aligned and centered */
 .header-container {
-    display: inline-block; /* Håller rubriker centrerade */
+    display: inline-block; /* Ensures the container stays centered */
 }
 
-/* Första rubriknivån i header */
+/* Styling for the first-level heading in the header */
+/* Provides consistent styling for the main title */
 header h1 {
-    font-size: 1.5em;
-    font-weight: 600;
-    letter-spacing: 0.5px; /* Lätt avstånd mellan bokstäver för bättre läsbarhet */
+    font-size: 1.5em; /* Balanced size for readability across devices */
+    font-weight: 600; /* Semi-bold for emphasis */
+    letter-spacing: 0.5px; /* Slight letter spacing for readability */
 }
 
-/* Andra rubriknivån i header */
+/* Styling for the second-level heading in the header */
+/* Ensures the subtitle has a clear hierarchy */
 header h2 {
-    font-size: 2.5em;
-    margin-top: 10px;
-    font-weight: 700; /* Tyngre vikt för att skapa en tydlig hierarki */
-    letter-spacing: 0.5px;
+    font-size: 2.5em; /* Larger font size for prominence */
+    margin-top: 10px; /* Adds spacing above the subtitle */
+    font-weight: 700; /* Bold for stronger emphasis */
+    letter-spacing: 0.5px; /* Consistent letter spacing */
 }
 
-/* Animation för header-övergångar */
+/* Animation for header transitions */
+/* Adds a smooth fade-in effect to the header titles */
 .header-container h1,
 .header-container h2 {
-    animation: fadeIn 1.2s ease-in-out;
+    animation: fadeIn 1.2s ease-in-out; /* Fade-in animation with smooth transition */
 }
 
-/* Keyframes för header-animation */
+/* Keyframes for header fade-in animation */
+/* Defines the fade-in effect's starting and ending points */
 @keyframes fadeIn {
     0% {
-        opacity: 0;
-        transform: translateY(-20px); /* Startpunkt ovanför den faktiska positionen */
+        opacity: 0; /* Starts invisible */
+        transform: translateY(-20px); /* Moves slightly above its final position */
     }
     100% {
-        opacity: 1;
-        transform: translateY(0); /* Slutposition för smidig övergång */
-    }
-}
-
-/* RESPONSIVA JUSTERINGAR */
-
-/* Justering för små skärmar */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.2em; /* Mindre textstorlek på mobila enheter */
-    }
-
-    header h2 {
-        font-size: 2em; /* Mindre textstorlek för att passa mobilvyn */
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Returns to its final position */
     }
 }

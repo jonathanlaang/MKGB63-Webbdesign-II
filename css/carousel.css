@@ -1,63 +1,53 @@
-/* CAROUSEL STYLES */
+/* --- CAROUSEL STYLES --- */
 
-/* Basinställningar för karusellen */
+/* Base settings for the carousel */
+/* Restricts the width of the carousel to ensure sufficient visual spacing around it */
 #spareTimeCarousel {
-    max-width: 90vw; /* Begränsad bredd för att ge visuellt utrymme runt karusellen */
-    margin: auto; /* Centrering av karusellen på sidan */
+    max-width: 90vw; /* Uses viewport width to make the carousel responsive */
+    margin: auto; /* Centers the carousel on the page */
 }
 
-/* Justering av karusellens inre höjd */
+/* Adjusting the inner height of the carousel */
+/* Ensures the carousel's inner content adapts to fill the full viewport height */
 .carousel-inner {
-    max-height: 100vh; /* Anpassar höjden för att fylla skärmen */
+    max-height: 100vh; /* Matches the viewport height for full-screen visuals */
 }
 
-/* Bilder i karusellen */
+/* Styling for images in the carousel */
+/* Makes images fully responsive while maintaining their aspect ratio and adding rounded corners */
 .carousel-item img.carousel-img {
-    width: 100%;
-    height: 100vh; /* Fyller hela viewport-höjden */
-    object-fit: cover; /* Fyller utrymmet utan att snedvrida bilderna */
-    border-radius: 8px;
+    width: 100%; /* Ensures images stretch to fill the carousel's width */
+    height: 100vh; /* Sets height to match the viewport, providing an immersive effect */
+    object-fit: cover; /* Ensures images scale without distortion */
+    border-radius: 8px; /* Adds slightly rounded corners for a modern design aesthetic */
 }
 
-/* Kontroller för karusellen */
+/* Controls for navigating the carousel */
+/* Styles the previous and next buttons for better visibility and usability */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #3C9DA3; /* Färg på kontroller för bättre synlighet */
-    border-radius: 50%; /* Rund form för kontroller */
-    width: 40px;
-    height: 40px;
-    background-size: 60%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Lätt skugga för djupkänsla */
+    background-color: #3C9DA3; /* Enhances the visibility of the controls against the background */
+    border-radius: 50%; /* Makes the controls circular for a sleek appearance */
+    width: 40px; /* Fixed size ensures consistency across devices */
+    height: 40px; /* Fixed size ensures consistency across devices */
+    background-size: 60%; /* Keeps the icons proportionate within the control buttons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
 }
 
-/* Captions för karusellbilder */
+/* Captions for carousel images */
+/* Positions captions at the bottom of the carousel with a semi-transparent background for readability */
 .carousel-caption {
-    position: absolute;
-    bottom: 0;
+    position: absolute; /* Allows precise placement within the carousel */
+    bottom: 0; /* Positions the caption at the bottom of the carousel */
     left: 0;
     right: 0;
-    padding: 10px;
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.5); /* Halvgenomskinlig bakgrund för läsbarhet */
-    text-align: center;
-    max-width: 100%;
+    padding: 10px; /* Ensures captions have enough space around the text */
+    color: #ffffff; /* Makes the text readable against dark backgrounds */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background to enhance text visibility */
+    text-align: center; /* Centers the text within the caption area */
+    max-width: 100%; /* Prevents captions from overflowing the carousel width */
     margin: 0;
-    border-radius: 1rem;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-/* Justeringar för mindre skärmar */
-@media (max-width: 768px) {
-    .carousel-caption {
-        font-size: 0.9em;
-        padding: 8px; /* Mindre padding för att passa mindre skärmar */
-    }
-}
-
-/* Mobilanpassning för att säkerställa rundade hörn */
-@media (max-width: 768px) {
-    .carousel-item img {
-        border-radius: 8px !important;
-    }
+    border-radius: 1rem; /* Adds rounded corners to match the carousel's design */
+    backdrop-filter: blur(5px); /* Adds a blur effect for a frosted glass appearance */
+    -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit-based browsers */
 }

@@ -1,35 +1,38 @@
-/* PRELOADER STYLES */
+/* --- PRELOADER STYLES --- */
 
-/* Basinställningar för preloader */
+/* Base styles for the preloader */
+/* Ensures the preloader covers the entire screen and prevents scrolling while visible */
 #preloader {
-  position: fixed; /* Fixerad position för att täcka hela skärmen */
-  inset: 0; /* Topp, höger, botten och vänster inställda till 0 för att täcka hela viewporten */
-  z-index: 999999; /* Sätter högsta möjliga z-index för att säkerställa synlighet över allt annat innehåll */
-  overflow: hidden; /* Förhindrar rullning medan preloadern visas */
-  background: #f4f4f4; /* Ljus bakgrundsfärg som matchar sidans övergripande färgschema */
-  transition: all 0.6s ease-out; /* Smooth transition för att gömma preloadern */
+  position: fixed; /* Stays fixed relative to the viewport */
+  inset: 0; /* Covers the entire screen (top, right, bottom, left set to 0) */
+  z-index: 999999; /* Highest possible z-index to ensure visibility over other content */
+  overflow: hidden; /* Prevents scrolling while the preloader is active */
+  background: #f4f4f4; /* Light background color to match the site's overall theme */
+  transition: all 0.6s ease-out; /* Smooth transition when hiding the preloader */
 }
 
-/* Animerad ikon för preloader */
+/* Animated preloader icon */
+/* Adds a circular loading icon with a rotating effect */
 #preloader:before {
-  content: ""; /* Tomt innehåll för den animerade ikonen */
-  position: fixed;
-  top: calc(50% - 30px); /* Centrerar vertikalt */
-  left: calc(50% - 30px); /* Centrerar horisontellt */
-  border: 6px solid #ffffff; /* Yttre kantfärg */
-  border-color: #26787c transparent rgb(121, 190, 190) transparent; /* Färgade kanter för animation */
-  border-radius: 50%; /* Rund form */
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite; /* Rotationseffekt för en konstant loop */
+  content: ""; /* Empty content to create the visual effect */
+  position: fixed; /* Keeps the icon in place relative to the viewport */
+  top: calc(50% - 30px); /* Vertically centers the icon */
+  left: calc(50% - 30px); /* Horizontally centers the icon */
+  border: 6px solid #ffffff; /* Outer border color for the loader */
+  border-color: #26787c transparent rgb(121, 190, 190) transparent; /* Alternating colors for the animation */
+  border-radius: 50%; /* Creates a circular shape */
+  width: 60px; /* Ensures the loader icon is neither too large nor too small */
+  height: 60px; /* Fixed height for the loader */
+  animation: animate-preloader 1.5s linear infinite; /* Creates a continuous rotation animation */
 }
 
-/* Keyframes för rotationseffekt */
+/* Keyframes for the rotation effect */
+/* Defines the starting and ending points for the animation */
 @keyframes animate-preloader {
   0% {
-      transform: rotate(0deg); /* Startar rotation vid 0 grader */
+      transform: rotate(0deg); /* Starts at 0 degrees */
   }
   100% {
-      transform: rotate(360deg); /* Slutför en rotation vid 360 grader */
+      transform: rotate(360deg); /* Completes one full rotation */
   }
 }

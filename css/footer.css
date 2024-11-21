@@ -1,43 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 
-/* FOOTER STYLES */
+/* --- FOOTER STYLES --- */
 
-/* Grundläggande layout för footern */
+/* Base layout for the footer */
+/* Provides padding and margins to ensure the footer is visually distinct from other content */
 .footer {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    margin-top: 3rem; /* Marginal över fotern för tydlig separation från innehållet ovanför */
-    margin-bottom: 6rem; /* Extra marginal nedåt för att ge luft mellan footer och botten av sidan */
+    padding-top: 2rem; /* Adds vertical spacing inside the footer */
+    padding-bottom: 2rem; /* Adds vertical spacing inside the footer */
+    margin-top: 3rem; /* Separates the footer from the content above */
+    margin-bottom: 6rem; /* Adds extra spacing below the footer for a clean layout */
 }
 
-/* Styling för text i footern */
+/* Styling for text inside the footer */
+/* Applies an elegant font style to enhance the footer's appearance */
 .footer p {
-    font-family: "Cormorant Garamond", serif; /* Elegant typsnitt för att ge en personlig stil */
-    font-weight: 500;
-    font-style: italic;
-    font-size: 1.4em; /* Fastsatt storlek för tydlighet och konsekvens */
-    color: #26787c; /* Accentfärg för att matcha sidans färgschema */
+    font-family: "Cormorant Garamond", serif; /* Adds a sophisticated serif font for a personal touch */
+    font-weight: 500; /* Slightly bold for emphasis */
+    font-style: italic; /* Adds an artistic flair to the text */
+    font-size: 1.4em; /* Fixed size for readability and consistency */
+    color: #26787c; /* Accent color aligns with the overall site theme */
 }
 
-/* Länkar i footern */
+/* Links inside the footer */
+/* Ensures the links match the overall design while remaining accessible */
 .footer-links a {
-    color: #3C9DA3; /* Primär länkfärg för visuell enhetlighet */
-    text-decoration: none;
-    margin: 0 10px; /* Mellanrum mellan länkarna för läsbarhet */
+    color: #3C9DA3; /* Primary link color for visual consistency */
+    text-decoration: none; /* Removes underlines for a cleaner look */
+    margin: 0 10px; /* Adds spacing between links for improved readability */
 }
 
 .footer-links a:hover {
-    text-decoration: underline; /* Understrykning för att indikera hovring */
-    color: rgb(121, 190, 190); /* Ljusare ton på hovring för kontrast */
+    text-decoration: underline; /* Adds an underline to indicate hover state */
+    color: rgb(121, 190, 190); /* Lightens the color on hover for contrast */
 }
 
-/* Sociala medieikoner i footern */
+/* Social media icons inside the footer */
+/* Enhances the visibility and usability of social icons */
 .social-links i {
-    font-size: 1.5rem; /* Stor fontstorlek för att göra ikonerna mer framträdande */
-    color: #3C9DA3;
-    margin: 0 5px; /* Små mellanrum mellan ikonerna */
+    font-size: 1.5rem; /* Fixed size ensures the icons are prominent and readable */
+    color: #3C9DA3; /* Matches the primary color scheme */
+    margin: 0 5px; /* Adds slight spacing between icons */
 }
 
 .social-links i:hover {
-    color: rgb(121, 190, 190); /* Hovringseffekt för att skapa visuell feedback */
+    color: rgb(121, 190, 190); /* Changes the color on hover for visual feedback */
 }

@@ -66,3 +66,58 @@
         font-size: 2.5rem; /* Skapar bättre balans och fyllighet på breda skärmar */
     }
 }
+
+
+
+
+/* --- Carousel adjustments for smaller screens --- */
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 0.9em;
+        padding: 8px; /* Mindre padding för att passa mindre skärmar */
+    }
+
+    .carousel-item img {
+        border-radius: 8px !important; /* Mobilanpassning för rundade hörn */
+    }
+}
+
+
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+/* Styling for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjusts layout for text-image group */
+    .text-image-group {
+        flex-direction: row; /* Changes layout to row format */
+        text-align: left; /* Aligns text to the left */
+    }
+
+    /* Image adjustments for smaller screens */
+    .text-image-group img {
+        max-width: 40%; /* Restricts image width to avoid taking excessive space */
+        margin-bottom: 0; /* Removes unnecessary margin below */
+    }
+
+    /* Paragraph adjustments for smaller screens */
+    .text-image-group p {
+        text-align: left; /* Aligns text to the left for better readability */
+        padding: 20px; /* Adds spacing around the paragraph */
+    }
+}
+
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+/* Adjustments for smaller screens (max-width: 768px) */
+/* Scales down header text for better readability on mobile devices */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2em; /* Reduces main title size for smaller screens */
+    }
+
+    header h2 {
+        font-size: 2em; /* Scales down subtitle size to fit mobile view */
+    }
+}
