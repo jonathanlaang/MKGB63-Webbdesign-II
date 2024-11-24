@@ -80,7 +80,7 @@
 }
 
 /* Hover effect for close button */
-/* Enhances the close button's hover interaction */
+/* Ensures close button is prominent and interactive */
 .offcanvas-header .btn-close:hover {
     background-color: #d0d0d0; /* Slightly darker background on hover */
 }

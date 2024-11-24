@@ -1,144 +1,198 @@
 /* --- CSS Variables for Responsive Design --- */
 :root {
-    --mobile-header-font-size: 1.2em; /* Header h1 font size for smaller screens */
-    --mobile-subheader-font-size: 2em; /* Header h2 font size for smaller screens */
-    --mobile-text-font-size: 0.9em; /* General text font size for smaller screens */
-    --mobile-padding: 0.5rem; /* Padding for compact elements */
-    --dark-bg-color: rgba(30, 30, 30, 0.9); /* Background color for dark mode */
-    --dark-hover-bg: #444; /* Hover background color for dark mode */
-    --medium-padding: 3rem 1.5rem; /* Padding for medium screens */
-    --large-header-font-size: 2.5rem; /* Header font size for large screens */
+    --mobile-header-font-size: 1.2em;
+    /* Header h1 font size for smaller screens */
+    --mobile-subheader-font-size: 2em;
+    /* Header h2 font size for smaller screens */
+    --mobile-text-font-size: 0.9em;
+    /* General text font size for smaller screens */
+    --mobile-padding: 0.5rem;
+    /* Padding for compact elements */
+    --dark-bg-color: rgba(30, 30, 30, 0.9);
+    /* Background color for dark mode */
+    --dark-hover-bg: #444;
+    /* Hover background color for dark mode */
+    --medium-padding: 3rem 1.5rem;
+    /* Padding for medium screens */
+    --large-header-font-size: 2.5rem;
+    /* Header font size for large screens */
 }
 
 /* --- Responsive Adjustments for Small Screens (max-width: 768px) --- */
 @media (max-width: 768px) {
+
     /* Adjustments for header titles */
     header h1 {
-        font-size: var(--mobile-header-font-size); /* Reduces main title size */
+        font-size: var(--mobile-header-font-size);
+        /* Reduces main title size for smaller screens */
     }
 
     header h2 {
-        font-size: var(--mobile-subheader-font-size); /* Scales down subtitle size */
+        font-size: var(--mobile-subheader-font-size);
+        /* Scales down subtitle size */
     }
 
-    /* Text-image group adjustments */
+    /* Switch to column layout for better stacking */
     .text-image-group {
-        flex-direction: column; /* Switch to column layout for better stacking */
-        align-items: center; /* Center items horizontally */
-        text-align: center; /* Center text for better visual balance */
+        flex-direction: column;
+        /* Ensures elements stack vertically */
+        align-items: center;
+        /* Centers items horizontally */
+        text-align: center;
+        /* Center text for better balance */
     }
 
+    /* Restricts image width for smaller screens */
     .text-image-group img {
-        max-width: 90%; /* Restricts image width for smaller screens */
-        margin-bottom: 1rem; /* Adds spacing below images */
-        object-fit: cover; /* Ensures images fit properly without distortion */
-        border-radius: 8px; /* Matches other elements' styling */
+        max-width: 90%;
+        /* Ensures images don't overflow */
+        margin-bottom: 1rem;
+        /* Adds spacing below images */
+        object-fit: cover;
+        /* Ensures images fit properly without distortion */
+        border-radius: 8px;
+        /* Matches other elements' styling */
     }
 
     .text-image-group p {
-        text-align: left; /* Aligns text to the left for readability */
-        padding: 0 10px; /* Adds spacing around text */
+        text-align: left;
+        /* Aligns text to the left for readability */
+        padding: 0 10px;
+        /* Adds spacing around text */
     }
 
     /* Section header adjustments */
     .section-header {
-        font-size: 1.2rem; /* Reduces section header font size */
-        margin-bottom: 15px; /* Adds spacing below section headers */
+        font-size: 1.2rem;
+        /* Reduces section header font size */
+        margin-bottom: 15px;
+        /* Adds spacing below section headers */
     }
 
     /* Project segment text adjustments */
     .project-segment p {
-        padding: 0 10px; /* Reduces padding for better fit on smaller screens */
+        padding: 0 10px;
+        /* Reduces padding for better fit on smaller screens */
     }
 
     /* Carousel image adjustments */
     .carousel-inner .carousel-item img {
-        max-height: 60vh; /* Restricts carousel image height */
-        object-fit: cover; /* Ensures images scale properly */
+        max-height: 60vh;
+        /* Restricts carousel image height */
+        object-fit: cover;
+        /* Ensures images scale properly */
     }
 
     .carousel-caption {
-        font-size: var(--mobile-text-font-size); /* Reduces caption text size */
-        padding: 8px; /* Reduces padding */
-        border-radius: 8px; /* Matches image styling */
+        font-size: var(--mobile-text-font-size);
+        /* Reduces caption text size */
+        padding: 8px;
+        /* Reduces padding */
+        border-radius: 8px;
+        /* Matches image styling */
     }
 
     /* Footer text adjustments */
     .footer p {
-        font-size: var(--mobile-text-font-size); /* Reduces footer text size */
+        font-size: var(--mobile-text-font-size);
+        /* Reduces footer text size */
     }
 
     /* Bottom navigation adjustments */
     #bottomNav {
-        padding: var(--mobile-padding); /* Reduces padding for compact design */
+        padding: var(--mobile-padding);
+        /* Reduces padding for compact design */
     }
 
     #sectionTitle {
-        font-size: var(--mobile-text-font-size); /* Reduces section title font size */
+        font-size: var(--mobile-text-font-size);
+        /* Reduces section title font size */
     }
 }
 
 /* --- Responsive Adjustments for Medium Screens (768px - 992px) --- */
 @media (min-width: 768px) and (max-width: 992px) {
+
     /* Content section padding adjustments */
     .content-section {
-        padding: var(--medium-padding); /* Adds padding for medium screens */
+        padding: var(--medium-padding);
+        /* Adds padding for medium screens */
     }
 
     /* Text-image group adjustments */
     .text-image-group {
-        flex-direction: row; /* Switches to row layout for better alignment */
-        align-items: flex-start; /* Aligns items to the top-left */
-        text-align: left; /* Aligns text to the left */
-        gap: 2rem; /* Adds spacing between items */
+        flex-direction: row;
+        /* Switches to row layout for better alignment */
+        align-items: flex-start;
+        /* Aligns items to the top-left */
+        text-align: left;
+        /* Aligns text to the left */
+        gap: 2rem;
+        /* Adds spacing between items */
     }
 
     .text-image-group img {
-        max-width: 40%; /* Restricts image width for balanced layout */
-        margin-bottom: 0; /* Removes unnecessary bottom margin */
+        max-width: 40%;
+        /* Restricts image width for balanced layout */
+        margin-bottom: 0;
+        /* Removes unnecessary bottom margin */
     }
 }
 
 /* --- Responsive Adjustments for Large Screens (min-width: 1200px) --- */
 @media (min-width: 1200px) {
+
     /* Enlarges section headers for better visibility */
     .section-header h2 {
-        font-size: var(--large-header-font-size); /* Increases font size for large screens */
+        font-size: var(--large-header-font-size);
+        /* Increases font size for large screens */
     }
 
     .text-image-group img {
-        max-width: 35%; /* Slightly smaller images for wide screens */
+        max-width: 35%;
+        /* Slightly smaller images for wide screens */
     }
 
     .content-section {
-        padding: 4rem 2rem; /* Adds more padding for large screens */
+        padding: 4rem 2rem;
+        /* Adds more padding for large screens */
     }
 }
 
 /* --- Dark Mode Adjustments --- */
 @media (prefers-color-scheme: dark) {
+
+    /* Ensures dark mode compatibility */
     .offcanvas,
     .offcanvas-header,
     .offcanvas-body {
-        background-color: var(--dark-bg-color); /* Dark mode background */
-        backdrop-filter: blur(10px); /* Adds frosted glass effect */
-        -webkit-backdrop-filter: blur(10px); /* Webkit compatibility */
-        color: #fff; /* Sets text to white for contrast */
+        background-color: var(--dark-bg-color);
+        /* Applies dark mode background */
+        backdrop-filter: blur(10px);
+        /* Frosted glass effect */
+        -webkit-backdrop-filter: blur(10px);
+        /* Webkit compatibility */
+        color: #fff;
+        /* Sets text to white for contrast */
     }
 
     .offcanvas .nav-link {
-        color: #ddd; /* Light gray text for dark mode links */
+        color: #ddd;
+        /* Light gray text for dark mode links */
     }
 
     .offcanvas .nav-link:hover {
-        background-color: var(--dark-hover-bg); /* Dark hover background */
+        background-color: var(--dark-hover-bg);
+        /* Dark hover background */
     }
 
     .social-links a {
-        color: #ddd; /* Light gray text for social links */
+        color: #ddd;
+        /* Light gray text for social links */
     }
 
     .social-links a:hover {
-        color: #fff; /* Changes to white on hover */
+        color: #fff;
+        /* Changes to white on hover */
     }
 }

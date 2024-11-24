@@ -4,12 +4,12 @@
 /* Provides a fixed navigation bar with a clean and modern look */
 #bottomNav {
     background-color: #f8f9fa; /* Neutral background for navigation */
-    padding: 15px; /* Adds spacing inside the navigation bar */
+    padding: 15px; /* Provides internal spacing */
     display: flex; /* Aligns children in a horizontal layout */
     justify-content: space-between; /* Distributes space between navigation items */
     align-items: center; /* Centers items vertically */
-    border-top: 1px solid #ddd; /* Adds a subtle border for separation */
-    border-radius: 15px 15px 0 0; /* Rounded corners at the top */
+    border-top: 1px solid #ddd; /* Adds separation */
+    border-radius: 15px 15px 0 0; /* Rounds top corners */
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
@@ -29,7 +29,7 @@
 /* Hover effect for navigation icons */
 /* Enhances visual feedback on hover */
 .nav-icon-container:hover {
-    background-color: #3c9ea3d1; /* Changes background color on hover */
+    background-color: #3c9ea3d1; /* Changes color for hover state */
     color: white; /* Optional color change for the icon */
 }
 
@@ -88,6 +88,18 @@
 .navbar-toggler i {
     font-size: 1.5em; /* Scales the icon size */
     color: rgba(30, 30, 30, 0.78); /* Matches the section title color */
+}
+
+.navbar-toggler:focus, 
+.navbar-toggler:active {
+    outline: none; /* Removes the default outline */
+    box-shadow: none; /* Removes any focus-related shadow */
+}
+
+/* Optional: Add a subtle visual cue for focus/active states */
+.navbar-toggler:focus-visible {
+    border: 2px solid #3C9DA3; /* Adds a custom focus border */
+    border-radius: 50%; /* Matches the button's shape */
 }
 
 /* Section indicators for scroll position */

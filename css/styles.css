@@ -82,22 +82,6 @@
     text-decoration-thickness: 2px; /* Bold underline */
 }
 
-/* --- NAVBAR TOGGLER STYLES --- */
-
-/* Styling for the navbar toggler */
-/* Ensures a clean, minimalistic appearance */
-.navbar-toggler {
-    background: none; /* Removes default background */
-    border: none; /* Removes default border */
-    padding: 0; /* Removes default padding */
-    outline: none; /* Hides focus outline */
-}
-
-.navbar-toggler i {
-    font-size: 1.5em; /* Adjusts icon size for visibility */
-    color: rgba(30, 30, 30, 0.78); /* Matches section title color */
-}
-
 /* --- SECTION INDICATORS --- */
 
 /* Fixed positioning for section indicators */
