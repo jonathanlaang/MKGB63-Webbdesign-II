@@ -34,8 +34,7 @@ This repository contains a responsive portfolio website designed and implemented
 │   ├── scrollbar.css    # Scrollbar customization
 │   ├── preloader.css    # Preloader styling
 │   ├── projects.css     # Project-specific styles
-│   ├── carousel.css     # Carousel adjustments
-│   └── styles.css       # General styles and overrides
+│   └── carousel.css     # Carousel adjustments
 ├── /js              # JavaScript files
 │   └── script.js        # Main script for interactivity
 ├── /images          # Image assets

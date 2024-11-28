@@ -33,49 +33,6 @@
     color: white; /* Optional color change for the icon */
 }
 
-/* Section title display within navigation */
-/* Adds a stylized section title with underline effects */
-#sectionTitle {
-    font-weight: bold; /* Emphasizes the title text */
-    font-size: 1.2em; /* Moderate size for readability */
-    color: rgba(30, 30, 30, 0.78); /* Subtle text color */
-    text-decoration: underline; /* Adds underline for visual focus */
-    text-underline-offset: 4px; /* Spaces underline from text */
-    text-decoration-thickness: 2px; /* Bold underline thickness */
-    position: relative; /* Allows animation positioning */
-    display: inline-block;
-    overflow: hidden; /* Prevents content overflow during animations */
-    height: 1.2em; /* Matches font size for alignment */
-    line-height: 1.2em; /* Ensures consistent vertical spacing */
-    user-select: none; /* Disables text selection */
-}
-
-/* Animation for section title transition */
-/* Creates a flipping effect for section titles */
-.flip {
-    display: inline-block; /* Allows animation within the inline context */
-    animation: flip 0.6s ease-in-out forwards; /* Smooth animation for title transition */
-}
-
-@keyframes flip {
-    0% {
-        transform: translateY(0%); /* Starts at the original position */
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(-100%); /* Moves out of view upwards */
-        opacity: 0;
-    }
-    50.1% {
-        transform: translateY(100%); /* Starts re-entering from the bottom */
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0%); /* Returns to the original position */
-        opacity: 1;
-    }
-}
-
 /* Navbar toggler icon */
 /* Styles the icon used for toggling the navigation bar */
 .navbar-toggler {
@@ -102,30 +59,36 @@
     border-radius: 50%; /* Matches the button's shape */
 }
 
-/* Section indicators for scroll position */
-/* Adds circular indicators to show the user's current section */
-.indicator {
-    display: block;
-    width: 10px; /* Fixed width for uniform indicators */
-    height: 10px; /* Fixed height for uniform indicators */
-    margin: 10px 0; /* Adds spacing between indicators */
-    border: 2px solid teal; /* Border color for visibility */
-    border-radius: 50%; /* Creates circular indicators */
-    z-index: 9999; /* Ensures visibility over other elements */
+/* --- BOTTOM NAVIGATION STYLES --- */
+
+/* Styling for the bottom navigation bar */
+/* Provides a clean and modern design for navigation */
+#bottomNav {
+    background-color: #f8f9fa; /* Neutral background color */
+    padding: 15px; /* Adds space inside the navigation bar */
+    display: flex; /* Aligns items horizontally */
+    justify-content: space-between; /* Distributes navigation items evenly */
+    align-items: center; /* Centers items vertically */
+    border-top: 1px solid #ddd; /* Adds a subtle top border for separation */
+    border-radius: 15px 15px 0 0; /* Rounds the top corners */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
 }
 
-/* Filled state for active section indicator */
-/* Highlights the current section indicator */
-.filled {
-    background-color: teal; /* Fills the active indicator */
+/* Icon container for navigation */
+/* Creates a circular container for navigation icons */
+.nav-icon-container {
+    background-color: #e0e0e0; /* Light gray background for icons */
+    border-radius: 50%; /* Circular shape */
+    width: 50px; /* Ensures consistent size across navigation icons */
+    height: 50px; /* Fixed size for uniformity */
+    display: flex; /* Centers the icon inside the circle */
+    justify-content: center;
+    align-items: center;
 }
 
-/* Positioning for indicators */
-/* Fixes indicators to the side of the viewport */
-#sectionIndicators {
-    position: fixed; /* Keeps indicators in place during scrolling */
-    top: 50%; /* Centers vertically */
-    left: 10px; /* Positions on the left side */
-    transform: translateY(-50%); /* Centers using translation */
-    z-index: 9999; /* Keeps indicators on top */
+/* Icon styling within the navigation container */
+/* Ensures icons are large enough for clarity */
+.nav-icon-container i {
+    font-size: 1.5em; /* Moderate size for icons */
+    color: rgba(30, 30, 30, 0.78); /* Subtle text color */
 }

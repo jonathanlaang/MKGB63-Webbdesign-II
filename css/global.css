@@ -3,87 +3,127 @@
 
 /* General reset to remove default padding and margin */
 * {
-    margin: 0; /* Removes all default margins */
-    padding: 0; /* Removes all default padding */
-    max-width: 100%;
-    box-sizing: border-box; /* Ensures padding and border are included in element size */
+    margin: 0;
+    /* Removes all default margins */
+    padding: 0;
+    /* Removes all default padding */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in element size */
     /* background: rgb(0 100 0 / 0.1) !important;   Uncomment for debugging layout (if needed) */
 }
 
 /* Base styles for body and html */
 /* Sets the overall appearance and typography for the entire page */
-html, body {
-    background-color: #f4f4f4; /* Light gray background for a clean look */
-    font-family: 'Poppins', sans-serif; /* Modern sans-serif font */
-    color: #333; /* Neutral text color for readability */
-    line-height: 1.6; /* Enhances text readability */
+html,
+body {
+    background-color: #f4f4f4;
+    /* Light gray background for a clean look */
+    font-family: 'Poppins', sans-serif;
+    /* Modern sans-serif font */
+    color: #333;
+    /* Neutral text color for readability */
+    line-height: 1.6;
+    /* Enhances text readability */
 
 }
 
 /* Headings styling */
 /* Provides consistent weight and style for all headings */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600; /* Uniform font weight for all heading levels */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    /* Uniform font weight for all heading levels */
 }
 
 /* Paragraph styling */
 /* Adds constraints to paragraphs to prevent overflow issues */
 p {
-    font-weight: 300; /* Light text weight for paragraphs */
-    max-height: 15rem; /* Fixed max height to manage overflow */
-    overflow-y: auto; /* Adds a scrollbar if content exceeds max height */
+    font-weight: 300;
+    /* Light text weight for paragraphs */
+    max-height: 15rem;
+    /* Fixed max height to manage overflow */
+    overflow-y: auto;
+    /* Adds a scrollbar if content exceeds max height */
 }
 
-/* Animation for elements appearing on scroll */
-/* Fade-in effect for smoother visibility transition */
+/* Fade-in effect for scroll-triggered animation */
+/* Adds smooth transition effects to elements entering the viewport */
 .fade-in {
-    opacity: 0; /* Starts hidden */
-    transform: translateY(20px); /* Shifts element slightly downward */
-    transition: all 0.7s ease-in-out; /* Sets duration and easing of the effect */
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(20px);
+    /* Starts slightly below its final position */
+    transition: all 0.7s ease-in-out;
+    /* Smooth transition over 0.7 seconds */
+    will-change: opacity, transform;
 }
 
 .fade-in.visible {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Restores to original position */
+    opacity: 1;
+    /* Fully visible */
+    transform: translateY(0);
+    /* Returns to its original position */
 }
 
 /* Scale-up animation for interactive elements */
 /* Provides a subtle zoom effect */
 .scale-up {
-    opacity: 0; /* Starts hidden */
-    transform: scale(0.9); /* Slightly shrinks the element */
-    transition: transform 0.7s ease, opacity 0.7s ease; /* Smooth scaling and fade */
+    opacity: 0;
+    /* Starts hidden */
+    transform: scale(0.9);
+    /* Slightly shrinks the element */
+    transition: transform 0.7s ease, opacity 0.7s ease;
+    /* Smooth scaling and fade */
 }
 
 .scale-up.visible {
-    opacity: 1; /* Fully visible */
-    transform: scale(1); /* Restores to original size */
+    opacity: 1;
+    /* Fully visible */
+    transform: scale(1);
+    /* Restores to original size */
 }
 
 /* Video styling */
 /* Adds rounded corners and a subtle shadow to videos */
 video {
-    max-width: 100%; /* Ensures video adapts to container width */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 8px; /* Softens the corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 100%;
+    /* Ensures video adapts to container width */
+    height: auto;
+    /* Maintains aspect ratio */
+    border-radius: 8px;
+    /* Softens the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
 }
 
 /* Responsive embedded video styling */
 /* Ensures proper aspect ratio for videos in embedded containers */
 .embed-responsive {
-    position: relative; /* Allows for positioning of child elements */
-    display: block; /* Ensures it behaves like a block element */
-    width: 100%; /* Takes full width of the parent container */
-    padding-top: 56.25%; /* Sets a 16:9 aspect ratio */
-    overflow: hidden; /* Ensures content doesn't spill out */
+    position: relative;
+    /* Allows for positioning of child elements */
+    display: block;
+    /* Ensures it behaves like a block element */
+    width: 100%;
+    /* Takes full width of the parent container */
+    padding-top: 56.25%;
+    /* Sets a 16:9 aspect ratio */
+    overflow: hidden;
+    /* Ensures content doesn't spill out */
 }
 
 .embed-responsive-item {
-    position: absolute; /* Positioned relative to the container */
+    position: absolute;
+    /* Positioned relative to the container */
     top: 0;
     left: 0;
-    width: 100%; /* Fills the container width */
-    height: 100%; /* Fills the container height */
-    border: 0; /* Removes any borders */
+    width: 100%;
+    /* Fills the container width */
+    height: 100%;
+    /* Fills the container height */
+    border: 0;
+    /* Removes any borders */
 }

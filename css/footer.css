@@ -6,43 +6,69 @@
 /* Base layout for the footer */
 /* Provides padding and margins to ensure the footer is visually distinct from other content */
 .footer {
-    padding-top: 2rem; /* Adds vertical spacing inside the footer */
-    padding-bottom: 2rem; /* Adds vertical spacing inside the footer */
-    margin-top: 3rem; /* Separates the footer from the content above */
-    margin-bottom: 6rem; /* Adds extra spacing below the footer for a clean layout */
+    padding-top: 2rem;
+    /* Adds vertical spacing inside the footer */
+    padding-bottom: 2rem;
+    /* Adds vertical spacing inside the footer */
+    margin-top: 3rem;
+    /* Separates the footer from the content above */
+    margin-bottom: 6rem;
+    /* Adds extra spacing below the footer for a clean layout */
 }
 
 /* Styling for text inside the footer */
 /* Applies an elegant font style to enhance the footer's appearance */
 .footer p {
-    font-family: "Cormorant Garamond", serif; /* Adds a sophisticated serif font for a personal touch */
-    font-weight: 500; /* Slightly bold for emphasis */
-    font-style: italic; /* Adds an artistic flair to the text */
-    font-size: 1.4em; /* Fixed size for readability and consistency */
-    color: #26787c; /* Accent color aligns with the overall site theme */
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    /* Slightly bold for emphasis */
+    font-style: italic;
+    /* Adds an artistic flair to the text */
+    font-size: 1.4em;
+    /* Fixed size for readability and consistency */
+    color: #26787c;
+    /* Accent color aligns with the overall site theme */
 }
 
 /* Links inside the footer */
 /* Ensures the links match the overall design while remaining accessible */
 .footer-links a {
-    color: #3C9DA3; /* Primary link color for visual consistency */
-    text-decoration: none; /* Removes underlines for a cleaner look */
-    margin: 0 10px; /* Adds spacing between links for improved readability */
+    color: #3C9DA3;
+    text-decoration: none;
+    /* Removes underlines for a cleaner look */
+    margin: 0 10px;
+    /* Adds spacing between links for improved readability */
 }
 
 .footer-links a:hover {
-    text-decoration: underline; /* Adds an underline to indicate hover state */
-    color: rgb(121, 190, 190); /* Lightens the color on hover for contrast */
+    text-decoration: underline;
+    /* Adds an underline to indicate hover state */
+    color: rgb(121, 190, 190);
+    /* Lightens the color on hover for contrast */
 }
 
 /* Social media icons inside the footer */
 /* Enhances the visibility and usability of social icons */
+.social-links a {
+    display: flex; /* Centers icons and text horizontally */
+    align-items: center; /* Aligns items vertically */
+    font-size: 1.1em; /* Slightly larger font for emphasis */
+    font-weight: 500; /* Medium weight for readability */
+    padding: 10px 0; /* Adds spacing around links */
+    color: #3C9DA3; /* Neutral color for text */
+    text-decoration: none; /* Removes underlines */
+}
+
 .social-links i {
-    font-size: 1.5rem; /* Fixed size ensures the icons are prominent and readable */
-    color: #3C9DA3; /* Matches the primary color scheme */
-    margin: 0 5px; /* Adds slight spacing between icons */
+    font-size: 1.5rem;
+    /* Fixed size ensures the icons are prominent and readable */
+    color: #3C9DA3;
+    /* Matches the primary color scheme */
+    margin: 0 5px;
+    /* Adds slight spacing between icons */
 }
 
 .social-links i:hover {
-    color: rgb(121, 190, 190); /* Changes the color on hover for visual feedback */
+    color: rgb(121, 190, 190);
+    /* Changes the color on hover for visual feedback */
 }

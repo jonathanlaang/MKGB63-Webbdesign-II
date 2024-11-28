@@ -4,55 +4,61 @@
 /* Basic styling for the header */
 /* Sets the overall alignment and padding for the header */
 header {
-    text-align: center; /* Centers all text inside the header */
-    padding: 20px; /* Adds vertical spacing around the header */
-    color: rgba(30, 30, 30, 0.78); /* Subtle color tone for text */
+    text-align: center;
+    /* Centers all text inside the header */
+    padding: 20px;
+    /* Adds vertical spacing around the header */
+    color: rgba(30, 30, 30, 0.78);
+    /* Subtle color tone for text */
 }
 
 /* Container for header titles */
 /* Keeps the header text properly aligned and centered */
 .header-container {
-    display: inline-block; /* Ensures the container stays centered */
+    display: inline-block;
+    /* Ensures the container stays centered */
 }
 
 /* Styling for the first-level heading in the header */
 /* Provides consistent styling for the main title */
 header h1 {
-    font-size: 1.5em; /* Balanced size for readability across devices */
-    font-weight: 600; /* Semi-bold for emphasis */
-    letter-spacing: 0.5px; /* Slight letter spacing for readability */
+    font-size: 1.5em;
+    /* Balanced size for readability across devices */
+    font-weight: 600;
+    /* Semi-bold for emphasis */
+    letter-spacing: 0.5px;
+    /* Slight letter spacing for readability */
 }
 
 /* Styling for the second-level heading in the header */
 /* Ensures the subtitle has a clear hierarchy */
 header h2 {
-    font-size: 2.5em; /* Larger font size for prominence */
-    margin-top: 10px; /* Adds spacing above the subtitle */
-    font-weight: 700; /* Bold for stronger emphasis */
-    letter-spacing: 0.5px; /* Consistent letter spacing */
-}
-
-.gradient-text {
-    /* Creates a dynamic gradient using the site's theme colors */
-    background: linear-gradient(90deg, #3C9DA3, #26787c, #74b7ed, #3b9ea3);
-    background-size: 200% 200%; /* Enlarges the gradient for smoother transitions */
-    -webkit-background-clip: text; /* Clips the gradient to the text only */
-    -webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
-    text-fill-color: transparent; /* Additional compatibility for browsers */
-    animation: gradient-animation 5s ease infinite; /* Smooth gradient animation */
-    font-weight: bold; /* Enhances visibility */
+    font-size: 2.5em;
+    /* Larger font size for prominence */
+    margin-top: 10px;
+    /* Adds spacing above the subtitle */
+    font-weight: 700;
+    /* Bold for stronger emphasis */
+    letter-spacing: 0.5px;
+    /* Consistent letter spacing */
+    text-decoration: none;
 }
 
 /* Keyframes for gradient animation */
 @keyframes gradient-animation {
     0% {
-        background-position: 0% 50%; /* Start at one side of the gradient */
+        background-position: 0% 50%;
+        /* Start at one side of the gradient */
     }
+
     50% {
-        background-position: 100% 50%; /* Move to the other side */
+        background-position: 100% 50%;
+        /* Move to the other side */
     }
+
     100% {
-        background-position: 0% 50%; /* Return to the original position */
+        background-position: 0% 50%;
+        /* Return to the original position */
     }
 }
 
@@ -60,18 +66,24 @@ header h2 {
 /* Adds a smooth fade-in effect to the header titles */
 .header-container h1,
 .header-container h2 {
-    animation: fadeIn 1.2s ease-in-out; /* Fade-in animation with smooth transition */
+    animation: fadeIn 1.2s ease-in-out;
+    /* Fade-in animation with smooth transition */
 }
 
 /* Keyframes for header fade-in animation */
 /* Defines the fade-in effect's starting and ending points */
 @keyframes fadeIn {
     0% {
-        opacity: 0; /* Starts invisible */
-        transform: translateY(-20px); /* Moves slightly above its final position */
+        opacity: 0;
+        /* Starts invisible */
+        transform: translateY(-20px);
+        /* Moves slightly above its final position */
     }
+
     100% {
-        opacity: 1; /* Fully visible */
-        transform: translateY(0); /* Returns to its final position */
+        opacity: 1;
+        /* Fully visible */
+        transform: translateY(0);
+        /* Returns to its final position */
     }
 }

@@ -1,130 +1,108 @@
 'use strict';
 
-// Wait until the DOM content is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Select relevant DOM elements
-    const sections = document.querySelectorAll('section'); // All sections on the page
-    const sectionTitle = document.getElementById('sectionTitle'); // The dynamic section title element
-    const indicators = document.querySelectorAll('.indicator'); // Scroll position indicators
-    const offcanvasMenu = document.getElementById('offcanvasNavbar'); // Offcanvas menu element
-    const navLinks = document.querySelectorAll('.nav-link'); // Navigation links
-
-    // Preloader: Remove the preloader element once the page has fully loaded
+    const sections = document.querySelectorAll('section');
+    const sectionTitle = document.getElementById('sectionTitle');
+    const indicators = document.querySelectorAll('.indicator');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const offcanvasMenu = document.getElementById('offcanvasNavbar');
     const preloader = document.querySelector('#preloader');
+    let currentSection = ''; // Keeps track of the currently active section
+
+    // Remove the preloader after the page has fully loaded
     if (preloader) {
-        window.addEventListener('load', () => {
-            preloader.remove(); // Remove the preloader from the DOM
+        window.addEventListener('load', () => preloader.remove());
+    }
+
+    // Update the current section based on the scroll position
+    function updateSectionInfo() {
+        sections.forEach((section, index) => {
+            const rect = section.getBoundingClientRect();
+            // Check if the section is in the viewport (more than half is visible)
+            if (rect.top <= window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+                const newSection = section.getAttribute('id');
+                // Only update if the section has changed
+                if (currentSection !== newSection) {
+                    currentSection = newSection;
+                    updateSectionTitle(currentSection);
+                    updateNavLinks(currentSection);
+                    updateIndicators(index);
+                }
+            }
         });
     }
 
-    /**
-     * Updates the current section information:
-     * - Displays the correct section title in the header
-     * - Highlights the active navigation link
-     * - Updates the active scroll indicator
-     */
-    function updateSectionInfo() {
-        let currentSection = ''; // Tracks the current section being viewed
-        const scrollPosition = window.pageYOffset; // Get current scroll position
-
-        // Loop through all sections to determine the current active section
-        sections.forEach((section, index) => {
-            const sectionTop = section.offsetTop; // Get the top position of the section
-            if (scrollPosition >= sectionTop - 50) { // Check if the section is in view
-                currentSection = section.getAttribute('id'); // Get the section's ID
-                updateIndicators(index); // Highlight the corresponding scroll indicator
-                updateNavLinks(currentSection); // Highlight the corresponding navigation link
-            }
-        });
-
-        // Section titles mapped to display-friendly names
+    // Update the section title displayed on the header
+    function updateSectionTitle(newSection) {
         const sectionNames = {
             'about-me': 'ABOUT ME',
             'projects': 'PROJECTS',
             'leisure-and-hobbies': 'Leisure & Hobbies',
             'student-memories': 'Student Memories',
         };
-
-        const newTitle = sectionNames[currentSection] || ''; // Default to empty string if no match
-
+        const newTitle = sectionNames[newSection] || '';
         // Update the section title only if it has changed
         if (sectionTitle.textContent !== newTitle) {
-            sectionTitle.classList.add('flip'); // Add animation class
+            sectionTitle.textContent = newTitle;
+            sectionTitle.classList.add('flip');
             sectionTitle.addEventListener('animationend', () => {
-                sectionTitle.textContent = newTitle; // Update the text content
-                sectionTitle.classList.remove('flip'); // Remove animation class after it ends
-            }, { once: true }); // Ensure the listener is removed after execution
+                sectionTitle.classList.remove('flip');
+            }, { once: true }); // Remove the event listener after it runs once
         }
     }
 
-    /**
-     * Updates the scroll indicators to reflect the currently active section.
-     * @param {number} activeIndex - Index of the active section
-     */
-    function updateIndicators(activeIndex) {
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('filled', index === activeIndex); // Highlight the active indicator
-            indicator.setAttribute('aria-hidden', index !== activeIndex); // Update accessibility attributes
-        });
-    }
-
-    /**
-     * Highlights the navigation link corresponding to the current section.
-     * @param {string} currentSection - The ID of the current section
-     */
+    // Update the navigation links to highlight the active section
     function updateNavLinks(currentSection) {
         navLinks.forEach(link => {
-            const isActive = link.getAttribute('href').includes(currentSection); // Check if the link points to the current section
-            link.classList.toggle('active-link', isActive); // Toggle the active-link class
+            const isActive = link.getAttribute('href').includes(currentSection);
+            link.classList.toggle('active-link', isActive);
         });
     }
 
-    // Handle offcanvas menu events to toggle the visibility of scroll indicators
+    // Update scroll indicators to highlight the active section
+    function updateIndicators(activeIndex) {
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('filled', index === activeIndex);
+            indicator.setAttribute('aria-hidden', index !== activeIndex);
+        });
+    }
+
+    // Handle visibility of the offcanvas menu (hide indicators while menu is open)
     if (offcanvasMenu) {
         offcanvasMenu.addEventListener('show.bs.offcanvas', () => {
-            indicators.forEach(indicator => indicator.style.display = 'none'); // Hide indicators when menu opens
+            indicators.forEach(indicator => indicator.style.display = 'none');
         });
-
         offcanvasMenu.addEventListener('hidden.bs.offcanvas', () => {
-            indicators.forEach(indicator => indicator.style.display = 'block'); // Show indicators when menu closes
+            indicators.forEach(indicator => indicator.style.display = 'block');
         });
     }
 
-    /**
-     * IntersectionObserver: Adds 'visible' class to elements as they come into view.
-     * Targets elements with classes: fade-in, scale-up, slide-in-left, slide-in-right.
-     */
-    const faders = document.querySelectorAll('.fade-in, .scale-up, .slide-in-left, .slide-in-right'); // Elements to observe
-    const appearOptions = {
-        threshold: 0.5, // Trigger when 50% of the element is visible
-        rootMargin: '0px 0px -50px 0px', // Offset to trigger slightly earlier
-    };
-
+    // Handle elements that should fade in or appear when scrolled into view
+    const faders = document.querySelectorAll('.fade-in, .scale-up, .slide-in-left, .slide-in-right');
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return; // Skip if the element is not visible
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                entry.target.style.opacity = '1';
+                observer.unobserve(entry.target); // Stop observing once the element is visible
             }
-            entry.target.classList.add('visible'); // Add the visible class
-            entry.target.style.opacity = '1'; // Ensure the element is visible
-            observer.unobserve(entry.target); // Stop observing once visible
         });
-    }, appearOptions);
-    
+    }, { threshold: 0.5, rootMargin: '0px 0px -50px 0px' });
 
-    faders.forEach(fader => appearOnScroll.observe(fader)); // Attach the observer to each element
+    faders.forEach(fader => appearOnScroll.observe(fader));
 
-    // Throttle scroll events to optimize performance
+    // Throttled scroll handling to optimize performance
     let isThrottled = false;
     window.addEventListener('scroll', () => {
-        if (isThrottled) return; // Skip if throttling is active
-
-        isThrottled = true;
-        setTimeout(() => {
-            updateSectionInfo(); // Update section info on scroll
-            isThrottled = false; // Reset throttling
-        }, 200); // Adjust the delay for smoother updates
+        if (!isThrottled) {
+            isThrottled = true;
+            requestAnimationFrame(() => {
+                updateSectionInfo();
+                isThrottled = false;
+            });
+        }
     });
 
-    updateSectionInfo(); // Initial call to set the correct state on page load
+    // Initial call to set the correct state when the page is loaded
+    updateSectionInfo();
 });
